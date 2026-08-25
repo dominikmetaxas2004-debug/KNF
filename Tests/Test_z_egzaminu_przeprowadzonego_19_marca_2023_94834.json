@@ -1,0 +1,1560 @@
+{
+  "meta": {
+    "source": "Test_z_egzaminu_przeprowadzonego_19_marca_2023_94834.pdf",
+    "exam": "Egzamin na Maklera Papierow Wartosciowych",
+    "set": "Zestaw numer 1",
+    "date": "2023-03-19",
+    "language": "pl",
+    "count": 119,
+    "multiVersionKey": false
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "number": 1,
+      "question": "W Spółce INK roczna sprzedaż netto za 2022 r. wyniosła 240.000 PLN, zaś średni stan należności za ten sam rok wyniósł 18.500 PLN. Bazując na powyższych danych, obrót należnościami (receivables turnover) oraz średni okres inkasa (average collection period), przy założeniu liczby dni w roku równej 365, wyniosły odpowiednio:",
+      "options": {
+        "A": "obrót należnościami 12,97 a średni okres inkasa 28,14",
+        "B": "obrót należnościami 28,14 a średni okres inkasa 12,97",
+        "C": "obrót należnościami i średni okres inkasa wyniosły tyle samo 28,14",
+        "D": "obrót należnościami i średni okres inkasa wyniosły tyle samo 12,97"
+      },
+      "answer": "A",
+      "answerText": "obrót należnościami 12,97 a średni okres inkasa 28,14"
+    },
+    {
+      "id": "q002",
+      "number": 2,
+      "question": "Portfel F osiągnął w badanym okresie wartość miernika Jensen’a na poziomie 2,59%, przy przeciętnej wartości stopy zwrotu z tego portfela równej 9,66% oraz stopie wolnej od ryzyka równej 3,22%. Jaka jest przeciętna wartość stopy zwrotu portfela rynkowego, jeżeli wartość miernika Treynor’a dla portfela F osiągnęła poziom 3,68%?",
+      "options": {
+        "A": "2,16%",
+        "B": "5,42%",
+        "C": "5,64%",
+        "D": "6,44%"
+      },
+      "answer": "B",
+      "answerText": "5,42%"
+    },
+    {
+      "id": "q003",
+      "number": 3,
+      "question": "Zgodnie z Regulaminem Giełdy Papierów Wartościowych w Warszawie S.A., transakcja pakietowa zawierana poza sesją giełdową, której przedmiotem są akcje notowane na giełdzie, może być zawarta jeżeli maksymalna różnica pomiędzy ceną danych akcji określoną w zleceniu a kursem odniesienia nie jest wyższa niż:",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "answer": "D",
+      "answerText": "40%"
+    },
+    {
+      "id": "q004",
+      "number": 4,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP wskaż zdanie nieprawdziwe w odniesieniu do systemu animatora rynku:",
+      "options": {
+        "A": "w systemie notowań z fazą notowań ciągłych w każdym dniu sesyjnym faza otwarcia co do zasady ma miejsce o godzinie 09:05",
+        "B": "przedmiotem obrotu w systemie animatora rynku są instrumenty strukturyzowane",
+        "C": "w systemie animatora rynku nie jest możliwa realizacja zleceń maklerskich w transakcjach typu „cross”",
+        "D": "komunikat ZOK (Zapytanie o Kwotowanie) jest wysyłany w fazie przed otwarciem po raz pierwszy w przypadku, gdy na 15 minut przed otwarciem w arkuszu zleceń brak jest zlecenia/zleceń animatora, do utrzymywania którego/których w danym czasie (dla danego stanu instrumentu) animator jest zobowiązany"
+      },
+      "answer": "D",
+      "answerText": "komunikat ZOK (Zapytanie o Kwotowanie) jest wysyłany w fazie przed otwarciem po raz pierwszy w przypadku, gdy na 15 minut przed otwarciem w arkuszu zleceń brak jest zlecenia/zleceń animatora, do utrzymywania którego/których w danym czasie (dla danego stanu instrumentu) animator jest zobowiązany"
+    },
+    {
+      "id": "q005",
+      "number": 5,
+      "question": "Akcjonariusz Kowalski posiada od roku akcje spółki publicznej X notowanej na rynku oficjalnych notowań stanowiące 9,99% ogólnej liczby głosów w tej spółce. W dniu 6 lutego 2023 r. akcjonariusz Kowalski sprzedał pakiet akcji stanowiący 3% ogólnej liczby głosów w spółce publicznej X, a 3 dni później kupił pakiet akcji stanowiący 0,99% ogólnej liczby głosów w spółce publicznej X. Wskaż, zgodnie z ustawą o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych, czy w wyniku w/w transakcji na akcjach spółki publicznej X, po stronie akcjonariusza Kowalskiego powstał obowiązek zawiadomienia o tym Komisji Nadzoru Finansowego oraz spółki publicznej X?:",
+      "options": {
+        "A": "obowiązek zawiadomienia nie powstał w odniesieniu do żadnej z transakcji",
+        "B": "obowiązek zawiadomienia powstał zarówno w związku z transakcją sprzedaży jak i transakcją kupna",
+        "C": "obowiązek zawiadomienia powstał tylko w odniesieniu do transakcji sprzedaży",
+        "D": "obowiązek zawiadomienia powstał tylko w odniesieniu do transakcji kupna"
+      },
+      "answer": "A",
+      "answerText": "obowiązek zawiadomienia nie powstał w odniesieniu do żadnej z transakcji"
+    },
+    {
+      "id": "q006",
+      "number": 6,
+      "question": "Jeżeli NPV danego projektu równe jest 2.061,69 PLN, przy jego indeksie zyskowności (ang. Profitability Index) na poziomie 1,38, to ile wynosi suma wartości bieżących wszystkich ujemnych przepływów występujących w tym projekcie?",
+      "options": {
+        "A": "1.493,98 PLN",
+        "B": "2.845,13 PLN",
+        "C": "5.425,50 PLN",
+        "D": "7.487,19 PLN"
+      },
+      "answer": "C",
+      "answerText": "5.425,50 PLN"
+    },
+    {
+      "id": "q007",
+      "number": 7,
+      "question": "W spółce DZW stopień dźwigni finansowej (degree of financial leverage) wyniósł 1,12. Oznacza to, że w przypadku gdy:",
+      "options": {
+        "A": "zysk operacyjny wzrośnie o 10%, to zysk netto wzrośnie o 11,2%",
+        "B": "zysk operacyjny spadnie o 10%, to zysk netto wzrośnie o 11,2%",
+        "C": "zysk operacyjny wzrośnie o 10%, to zysk netto wzrośnie o 10%",
+        "D": "wynik finansowy pozostanie niezmieniony, zyski nadzwyczajne wzrosną o 1,12%"
+      },
+      "answer": "A",
+      "answerText": "zysk operacyjny wzrośnie o 10%, to zysk netto wzrośnie o 11,2%"
+    },
+    {
+      "id": "q008",
+      "number": 8,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi regulamin rynku regulowanego uchwala:",
+      "options": {
+        "A": "minister właściwy do spraw instytucji finansowych",
+        "B": "Komisja Nadzoru Finansowego, na wniosek zarządu spółki prowadzącej rynek regulowany",
+        "C": "zarząd spółki prowadzącej rynek regulowany, na wniosek rady nadzorczej spółki",
+        "D": "rada nadzorcza spółki prowadzącej rynek regulowany, na wniosek zarządu spółki"
+      },
+      "answer": "D",
+      "answerText": "rada nadzorcza spółki prowadzącej rynek regulowany, na wniosek zarządu spółki"
+    },
+    {
+      "id": "q009",
+      "number": 9,
+      "question": "Akcje spółki RRR notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs zamknięcia na tej sesji wynosił 98,98. Minimalna wielkość zmiany ceny to 0,01. W fazie dogrywki arkusz zleceń przedstawiał się następująco: KUPNO LIMIT SPRZEDAZ --- 100,00 500 --- 99,00 500 98,70 --- 500 98,60 500 --- Wskaż, które z poniższych działań mogą zostać dokonane w fazie dogrywki:",
+      "options": {
+        "A": "modyfikacja limitu ceny kupna z 98,70 na PKC",
+        "B": "złożenie zlecenia kupna z limitem 98,98 i warunkiem PEG",
+        "C": "złożenie zlecenia sprzedaży z limitem 98,98, wolumenem 1.000 i warunkiem MWW=200",
+        "D": "żadne z powyższych"
+      },
+      "answer": "C",
+      "answerText": "złożenie zlecenia sprzedaży z limitem 98,98, wolumenem 1.000 i warunkiem MWW=200"
+    },
+    {
+      "id": "q010",
+      "number": 10,
+      "question": "Zgodnie z ustawą o rachunkowości, w odniesieniu do rachunku przepływów pieniężnych, przez pozyskiwanie lub utratę źródeł finansowania [zmiany w rozmiarach i relacjach kapitału (funduszu) własnego i obcego w jednostce] oraz wszystkie z nimi związane pieniężne koszty i korzyści, określa się jako działalność:",
+      "options": {
+        "A": "operacyjną",
+        "B": "inwestycyjną",
+        "C": "lokacyjną",
+        "D": "finansową"
+      },
+      "answer": "D",
+      "answerText": "finansową"
+    },
+    {
+      "id": "q011",
+      "number": 11,
+      "question": "Jaki jest nominał obligacji zerokuponowej, jeżeli na 13 lat przed jej wykupem cena tej obligacji wynosi 215.200,00 PLN, przy stopie zwrotu do wykupu (ang. yield to maturity) wynoszącej 9%?",
+      "options": {
+        "A": "31.333 PLN",
+        "B": "70.194 PLN",
+        "C": "659.760 PLN",
+        "D": "1.416.038 PLN"
+      },
+      "answer": "C",
+      "answerText": "659.760 PLN"
+    },
+    {
+      "id": "q012",
+      "number": 12,
+      "question": "Wskaż, które z poniższych stwierdzeń odnoszących się do Przewodniczącego Komisji Nadzoru Finansowego nie jest zgodne z ustawą o nadzorze nad rynkiem finansowym:",
+      "options": {
+        "A": "Przewodniczącego Komisji powołuje Prezes Rady Ministrów na sześcioletnią kadencję",
+        "B": "Przewodniczący Komisji kieruje pracami Komisji Nadzoru Finansowego i reprezentuje ją na zewnątrz",
+        "C": "w zakresie określonym w ustawie Przewodniczący Komisji posiada uprawnienia prokuratora w postępowaniu cywilnym",
+        "D": "Przewodniczący Komisji jest organem Urzędu Komisji Nadzoru Finansowego"
+      },
+      "answer": "A",
+      "answerText": "Przewodniczącego Komisji powołuje Prezes Rady Ministrów na sześcioletnią kadencję"
+    },
+    {
+      "id": "q013",
+      "number": 13,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP i harmonogramem notowań w systemie notowań ciągłych dla dłużnych instrumentów finansowych, prawdą jest że:",
+      "options": {
+        "A": "faza dogrywki trwa od godz. 17:00 do godz. 17:05",
+        "B": "faza dogrywki trwa od godz. 17:00 do godz. 17:10",
+        "C": "faza dogrywki trwa od godz. 17:00 do godz. 17:15",
+        "D": "dla wskazanych instrumentów nie ma fazy dogrywki"
+      },
+      "answer": "D",
+      "answerText": "dla wskazanych instrumentów nie ma fazy dogrywki"
+    },
+    {
+      "id": "q014",
+      "number": 14,
+      "question": "Zgodnie z techniką oceny rentowności portfela obligacji zaproponowaną przez G. Fonga, Ch. Pearsona i O. Vasicek’a, wkład zarządzania składa się z następujących czynników: I. zwrot z tytułu zarządzania terminami płatności; II. zwrot z tytułu zarządzania rozpiętością/jakością; III. zwrot z tytułu doboru specjalnych papierów wartościowych; IV. nieoczekiwany zwrot z obligacji. Wersje odpowiedzi:",
+      "options": {
+        "A": "(I, II, III)",
+        "B": "(II, III, IV)",
+        "C": "(I, II, IV)",
+        "D": "(I, III, IV)"
+      },
+      "answer": "A",
+      "answerText": "(I, II, III)"
+    },
+    {
+      "id": "q015",
+      "number": 15,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP wartość zlecenia z warunkiem WUJ w chwili złożenia na giełdę nie może być mniejsza niż:",
+      "options": {
+        "A": "10.000 zł - dla instrumentów finansowych notowanych w złotych i 50.000 EUR - dla instrumentów finansowych notowanych w euro",
+        "B": "50.000 zł - dla instrumentów finansowych notowanych w złotych i 10.000 EUR - dla instrumentów finansowych notowanych w euro",
+        "C": "10.000 zł - dla instrumentów finansowych notowanych w złotych i 10.000 EUR - dla instrumentów finansowych notowanych w euro",
+        "D": "50.000 zł - dla instrumentów finansowych notowanych w złotych i 50.000 EUR - dla instrumentów finansowych notowanych w euro"
+      },
+      "answer": "B",
+      "answerText": "50.000 zł - dla instrumentów finansowych notowanych w złotych i 10.000 EUR - dla instrumentów finansowych notowanych w euro"
+    },
+    {
+      "id": "q016",
+      "number": 16,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi zarząd spółki prowadzącej rynek regulowany podejmuje uchwałę w sprawie dopuszczenia instrumentów finansowych do obrotu na rynku regulowanym w terminie:",
+      "options": {
+        "A": "7 dni od dnia złożenia wniosku",
+        "B": "14 dni od dnia złożenia wniosku",
+        "C": "miesiąca od dnia złożenia wniosku",
+        "D": "2 miesięcy od dnia złożenia wniosku"
+      },
+      "answer": "B",
+      "answerText": "14 dni od dnia złożenia wniosku"
+    },
+    {
+      "id": "q017",
+      "number": 17,
+      "question": "Opcja realna, polegająca na możliwości zatrzymania produkcji i ponownego jej uruchomienia (ang. option to shut down and restart) może być interpretowana jako:",
+      "options": {
+        "A": "amerykańska opcja kupna (call)",
+        "B": "portfel złożony z amerykańskiej opcji sprzedaży (put) i amerykańskiej opcji kupna (call)",
+        "C": "portfel złożony z dwóch amerykańskich opcji sprzedaży (put)",
+        "D": "amerykańska opcja sprzedaży (put)"
+      },
+      "answer": "B",
+      "answerText": "portfel złożony z amerykańskiej opcji sprzedaży (put) i amerykańskiej opcji kupna (call)"
+    },
+    {
+      "id": "q018",
+      "number": 18,
+      "question": "Akcje spółki DDD notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. W fazie przed otwarciem do pustego arkusza zleceń wprowadzono kolejno następujące zlecenia: KOLEJNOŚĆ RODZAJ ILOŚĆ LIMIT CENY WARUNEK z ł o Ze n ia ZLECENIA DODATKOWY 3.000 25,00 Pierwsze Kupno 1.200 25,00 WUJ: 500 Drugie Kupno 4.300 27,00 Trzecie Sprzedaż 500 28,00 Czwarte Sprzedaż 700 29,00 Piąte Sprzedaż Proszę wskazać, która z poniższych modyfikacji nie spowoduje utraty priorytetu czasu:",
+      "options": {
+        "A": "zmniejszenie wolumenu w zleceniu drugim do 1.000",
+        "B": "zmiana limitu ceny w zleceniu trzecim na zlecenie PKC",
+        "C": "usunięcie warunku WUJ w zleceniu pierwszym",
+        "D": "zwiększenie limitu ceny w zleceniu czwartym do 29,00"
+      },
+      "answer": "A",
+      "answerText": "zmniejszenie wolumenu w zleceniu drugim do 1.000"
+    },
+    {
+      "id": "q019",
+      "number": 19,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie trybu i warunków postępowania firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, oraz banków powierniczych, w odniesieniu do usługi maklerskiej, która ma być świadczona w sprzedaży krzyżowej, nie jest prawdą, że:",
+      "options": {
+        "A": "firma inwestycyjna przekazuje informacje o warunkach umowy w ramach sprzedaży krzyżowej w odpowiednim czasie przed jej zawarciem, umożliwiającym klientowi lub potencjalnemu klientowi odpowiednie zapoznanie się z tymi informacjami, zrozumienie charakteru i ryzyka wynikających ze sprzedaży krzyżowej i podjęcie świadomej decyzji co do zawarcia umów w ramach sprzedaży krzyżowej",
+        "B": "firma inwestycyjna przedstawia klientowi opis ryzyka związanego ze sprzedażą krzyżową wraz z opisem ryzyk wynikających z poszczególnych usług świadczonych w ramach sprzedaży krzyżowej oraz informacje o zmianach w zakresie ryzyka, jakie wynikają ze sprzedaży krzyżowej w porównaniu z ryzykami, które wynikałyby z poszczególnych usług, gdyby te usługi były świadczone na podstawie odrębnych umów",
+        "C": "w przypadku reklamy sprzedaży krzyżowej firma inwestycyjna przekazuje informacje o ryzykach związanych ze sprzedażą krzyżową oraz informacje o kosztach i opłatach związanych z zawarciem, wykonaniem lub rozwiązaniem poszczególnych umów z wykorzystaniem tego samego typu i rozmiaru czcionki jak pozostałe elementy zbioru informacji przekazywanego w ramach reklamy sprzedaży krzyżowej",
+        "D": "firma inwestycyjna może zawrzeć umowę w ramach sprzedaży krzyżowej, gdy okresy odstąpienia lub rozwiązania umowy usług zawieranych w ramach sprzedaży krzyżowej różniłyby się od okresów odstąpienia lub rozwiązania umów o świadczenie takich usług gdyby te usługi byłyby świadczone na podstawie odrębnych umów, pod warunkiem, że poinformuje o tym klienta lub potencjalnego klienta"
+      },
+      "answer": "D",
+      "answerText": "firma inwestycyjna może zawrzeć umowę w ramach sprzedaży krzyżowej, gdy okresy odstąpienia lub rozwiązania umowy usług zawieranych w ramach sprzedaży krzyżowej różniłyby się od okresów odstąpienia lub rozwiązania umów o świadczenie takich usług gdyby te usługi byłyby świadczone na podstawie odrębnych umów, pod warunkiem, że poinformuje o tym klienta lub potencjalnego klienta"
+    },
+    {
+      "id": "q020",
+      "number": 20,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie trybu i warunków postępowania firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, oraz banków powierniczych, w odniesieniu do zarządzania portfelami, w skład których wchodzi jeden lub większa liczba instrumentów finansowych miejscem wykonania jest:",
+      "options": {
+        "A": "ASO",
+        "B": "rynek regulowany",
+        "C": "podmiot wykonujący zlecenie przekazane przez firmę inwestycyjną",
+        "D": "OTF"
+      },
+      "answer": "C",
+      "answerText": "podmiot wykonujący zlecenie przekazane przez firmę inwestycyjną"
+    },
+    {
+      "id": "q021",
+      "number": 21,
+      "question": "Wskaż, które z poniższych stwierdzeń odnoszących się do wezwania do zapisywania się na sprzedaż lub zamianę akcji spółki publicznej nie jest zgodne z ustawą o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych:",
+      "options": {
+        "A": "Komisja Nadzoru Finansowego może zgłosić żądanie wprowadzenia niezbędnych zmian lub uzupełnień w treści wezwania, w terminie określonym w ustawie",
+        "B": "ogłoszenie wezwania następuje po ustanowieniu na rzecz podmiotu pośredniczącego zabezpieczenia w wysokości nie niższej niż 90% wartości akcji, które mają być przedmiotem wezwania",
+        "C": "wezwanie jest ogłaszane i przeprowadzane za pośrednictwem podmiotu pośredniczącego",
+        "D": "odstąpienie od ogłoszonego wezwania jest niedopuszczalne, chyba że po jego ogłoszeniu inny podmiot ogłosił po wyższej cenie wezwanie do zapisywania się na sprzedaż lub zamianę wszystkich pozostałych akcji spółki publicznej i w wezwaniu tym nie zastrzeżono żadnego warunku"
+      },
+      "answer": "B",
+      "answerText": "ogłoszenie wezwania następuje po ustanowieniu na rzecz podmiotu pośredniczącego zabezpieczenia w wysokości nie niższej niż 90% wartości akcji, które mają być przedmiotem wezwania"
+    },
+    {
+      "id": "q022",
+      "number": 22,
+      "question": "Akcje spółki QQQ notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Na podstawie poniższych zleceń złożonych w fazie przed zamknięciem proszę wskazać kurs zamknięcia. Kurs odniesienia: 5,70 Minimalna wielkość zmiany ceny: 0,01 KUPNO LIMIT SPRZEDAZ 200 5,80 100 700 5,75 100 100 5,73 400 200 5,70 300 200 5,69 200",
+      "options": {
+        "A": "5,74",
+        "B": "5,73",
+        "C": "5,75",
+        "D": "5,80"
+      },
+      "answer": "A",
+      "answerText": "5,74"
+    },
+    {
+      "id": "q023",
+      "number": 23,
+      "question": "Wskaż, które z niżej wymienionych stwierdzeń odnoszących się do spółki akcyjnej, nie jest zgodne z ustawą Kodeks spółek handlowych:",
+      "options": {
+        "A": "akcjonariusze odpowiadają za zobowiązania spółki",
+        "B": "osoby podpisujące statut są założycielami spółki",
+        "C": "firma spółki może być obrana dowolnie; powinna zawierać dodatkowe oznaczenie \"spółka akcyjna\"",
+        "D": "do powstania spółki akcyjnej wymaga się m.in. ustanowienia zarządu i rady nadzorczej"
+      },
+      "answer": "A",
+      "answerText": "akcjonariusze odpowiadają za zobowiązania spółki"
+    },
+    {
+      "id": "q024",
+      "number": 24,
+      "question": "Wskaż, która z poniższych metod wyceny, bazujących na metodzie zdyskontowanych przepływów pieniężnych, nie opiera dyskonta na średnim ważonym koszcie kapitału (WACC): I. metoda Equity Cash Flow; II. metoda Firm Cash Flow; III. metoda Capital Cash Flow; IV. metoda Adjusted Present Value. Wersje odpowiedzi:",
+      "options": {
+        "A": "(I, II, III)",
+        "B": "(II, III, IV)",
+        "C": "(II, III)",
+        "D": "(III, IV)"
+      },
+      "answer": "C",
+      "answerText": "(II, III)"
+    },
+    {
+      "id": "q025",
+      "number": 25,
+      "question": "Wskaż, które z niżej wymienionych stwierdzeń odnoszących się do zasad postępowania wobec klientów nie jest zgodne z Zasadami Etyki Zawodowej Maklerów i Doradców:",
+      "options": {
+        "A": "maklerzy i doradcy powinni działań w najlepszym interesie klientów",
+        "B": "maklerzy i doradcy obowiązani są stosować wobec klientów jednolite kryteria oraz postępować wobec wszystkich klientów uczciwie i obiektywnie",
+        "C": "maklerzy i doradcy powinni podejmować wszelkie niezbędne działania mające na celu zabezpieczenie klientów przed możliwymi stratami wynikającymi z zakończenia działalności przez nich lub przez ich pracodawcę",
+        "D": "maklerzy i doradcy nie muszą ujawniać klientom i potencjalnym klientom ogólnych zasad i metod stanowiących podstawę decyzji inwestycyjnych"
+      },
+      "answer": "D",
+      "answerText": "maklerzy i doradcy nie muszą ujawniać klientom i potencjalnym klientom ogólnych zasad i metod stanowiących podstawę decyzji inwestycyjnych"
+    },
+    {
+      "id": "q026",
+      "number": 26,
+      "question": "Zgodnie z ustawą Kodeks cywilny prokurentem może być:",
+      "options": {
+        "A": "osoba fizyczna mająca pełną zdolność do czynności prawnych",
+        "B": "osoba fizyczna mająca co najmniej ograniczoną zdolność do czynności prawnych",
+        "C": "osoba prawna lub osoba fizyczna mająca co najmniej ograniczoną zdolność do czynności prawnych",
+        "D": "osoba prawna lub osoba fizyczna mająca pełną zdolność do czynności prawnych"
+      },
+      "answer": "A",
+      "answerText": "osoba fizyczna mająca pełną zdolność do czynności prawnych"
+    },
+    {
+      "id": "q027",
+      "number": 27,
+      "question": "Akcje spółki HHH notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Krok notowań wynosi 0,01. Arkusz zleceń w fazie notowań ciągłych przedstawiał się następująco: KUPNO LIMIT SPRZEDAZ --- 19,67 973 347 19,60 --- 129 19,57 --- 800 19,06 --- Wskaż, czy i które z niżej wymienionych transakcji zostaną zrealizowane po prowadzeniu do arkusza zlecenia sprzedaży 500 akcji z limitem 19,57 i warunkiem WIA:",
+      "options": {
+        "A": "zostanie zrealizowane 347 sztuk po kursie 19,57",
+        "B": "zostanie zrealizowane 129 sztuk po kursie 19,57 oraz pozostałe 371 sztuk po kursie 19,60",
+        "C": "zlecenie zostanie odrzucone i transakcja nie zostanie zrealizowana",
+        "D": "żadne z powyższych"
+      },
+      "answer": "D",
+      "answerText": "żadne z powyższych"
+    },
+    {
+      "id": "q028",
+      "number": 28,
+      "question": "Akcje spółki EEE notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs zamknięcia na sesji wczorajszej wyniósł 10,12. Kurs otwarcia na sesji dzisiejszej wyniósł 10,15. Kurs ostatniej transakcji zawartej w fazie notowań ciągłych wyniósł 10,17. Wskaż kurs odniesienia dla kursu zamknięcia na sesji dzisiejszej dla statycznych ograniczeń wahań kursów:",
+      "options": {
+        "A": "10,12",
+        "B": "10,15",
+        "C": "10,17",
+        "D": "kurs odniesienia nie zostanie ustalony"
+      },
+      "answer": "B",
+      "answerText": "10,15"
+    },
+    {
+      "id": "q029",
+      "number": 29,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP, w systemie animatora rynku, kurs obligacji strukturyzowanych określany jest:",
+      "options": {
+        "A": "w procentach ich wartości nominalnej z dokładnością do 0,01punktuprocentowego",
+        "B": "w procentach ich wartości nominalnej z dokładnością do 0,0001punktu procentowego",
+        "C": "w walucie PLN z dokładnością do 0,01 PLN",
+        "D": "w walucie PLN z dokładnością do 0,0001 PLN"
+      },
+      "answer": "A",
+      "answerText": "w procentach ich wartości nominalnej z dokładnością do 0,01punktuprocentowego"
+    },
+    {
+      "id": "q030",
+      "number": 30,
+      "question": "Zgodnie z ustawą o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi przynosząca regularny dopływ kapitału grupa jednolitych rodzajowo wierzytelności, posiadanych i wyodrębnionych przez inicjatora sekurytyzacji, z których każda z wierzytelności stanowiących łącznie co najmniej 75% grupy przynosi regularny dopływ kapitału oraz każda wierzytelność spełnia kryteria określone w statucie funduszu, to:",
+      "options": {
+        "A": "grupa sekurytyzacyjna",
+        "B": "subfundusz sekurytyzacyjny",
+        "C": "pula sekurytyzacyjna",
+        "D": "pula wierzytelności"
+      },
+      "answer": "D",
+      "answerText": "pula wierzytelności"
+    },
+    {
+      "id": "q031",
+      "number": 31,
+      "question": "Zgodnie z Regulaminem Giełdy Papierów Wartościowych w Warszawie S.A., standard instrumentów pochodnych jest określany przez:",
+      "options": {
+        "A": "Radę Giełdy",
+        "B": "Zarząd Giełdy",
+        "C": "Przewodniczącego sesji",
+        "D": "emitenta"
+      },
+      "answer": "B",
+      "answerText": "Zarząd Giełdy"
+    },
+    {
+      "id": "q032",
+      "number": 32,
+      "question": "W zagadnieniu wyceny opcji, zjawisko polegające na tym, że wyższe oszacowania zmienności otrzymuje się przy wysokich i niskich cenach wykonania, niższe zaś przy średnich, nosi nazwę:",
+      "options": {
+        "A": "zmienności implikowanej (ang. implied volatility)",
+        "B": "zmienności historycznej (ang. historical volatility)",
+        "C": "parytetu put-call",
+        "D": "uśmiechu zmienności (ang. volatility smile)"
+      },
+      "answer": "D",
+      "answerText": "uśmiechu zmienności (ang. volatility smile)"
+    },
+    {
+      "id": "q033",
+      "number": 33,
+      "question": "Jeżeli inwestor zainwestuje w chwili obecnej 525.400 PLN w lokatę bankową z kwartalną kapitalizacją odsetek, to jaki wieczny kwartalny przepływ gotówki uzyska inwestor, jeżeli lokata ta jest oprocentowana roczną stopą procentową w wysokości 8,48%?",
+      "options": {
+        "A": "3.712,83 PLN",
+        "B": "7.425,65 PLN",
+        "C": "11.138,48 PLN",
+        "D": "22.276,96 PLN"
+      },
+      "answer": "C",
+      "answerText": "11.138,48 PLN"
+    },
+    {
+      "id": "q034",
+      "number": 34,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP zlecenie LIMIT zawiera limit ceny i może być realizowane wyłącznie po cenie określonej w tym limicie albo po cenie:",
+      "options": {
+        "A": "wyższej - w przypadku zlecenia kupna, albo po cenie niższej - w przypadku zlecenia sprzedaży",
+        "B": "niższej - w przypadku zlecenia kupna, albo po cenie wyższej - w przypadku zlecenia sprzedaży",
+        "C": "niższej dla każdego rodzaju zleceń",
+        "D": "wyższej dla każdego rodzaju zleceń"
+      },
+      "answer": "B",
+      "answerText": "niższej - w przypadku zlecenia kupna, albo po cenie wyższej - w przypadku zlecenia sprzedaży"
+    },
+    {
+      "id": "q035",
+      "number": 35,
+      "question": "Zgodnie z ustawą o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi w przypadku firmy inwestycyjnej, banku krajowego wykonującego działalność, o której mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, pośrednictwo w zbywaniu i odkupywaniu jednostek uczestnictwa to czynność:",
+      "options": {
+        "A": "wykonywania zleceń",
+        "B": "przyjmowania i przekazywania zleceń",
+        "C": "oferowania instrumentów finansowych",
+        "D": "nie jest to czynność maklerska"
+      },
+      "answer": "B",
+      "answerText": "przyjmowania i przekazywania zleceń"
+    },
+    {
+      "id": "q036",
+      "number": 36,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi nabywanie lub zbywanie instrumentów finansowych na rachunek zleceniodawcy lub dokonywanie innych czynności wywołujących równoważne skutki, których przedmiotem są instrumenty finansowe, to usługa maklerska:",
+      "options": {
+        "A": "przyjmowania i przekazywania zleceń",
+        "B": "wykonywania zleceń",
+        "C": "oferowania instrumentów finansowych",
+        "D": "zarządzania portfelami, w skład których wchodzi jeden lub większa liczba instrumentów finansowych"
+      },
+      "answer": "B",
+      "answerText": "wykonywania zleceń"
+    },
+    {
+      "id": "q037",
+      "number": 37,
+      "question": "Członek Rady Nadzorczej spółki publicznej X (emitenta) notowanej na rynku regulowanym prowadzonym przez Giełdę Papierów Wartościowych w Warszawie S.A. kupił w dniu 25 stycznia 2023 r. (po raz pierwszy w 2023 r.) na swój rachunek akcje spółki publicznej X za kwotę o równowartości 9.000 EUR. Zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) nr 596/2014 z dnia 16 kwietnia 2014 r. w sprawie nadużyć na rynku (rozporządzenie w sprawie nadużyć na rynku) oraz uchylające dyrektywę 2003/6/WE Parlamentu Europejskiego i Rady i dyrektywy Komisji 2003/124/WE, 2003/125/WE i 2004/72/WE, czy a jeżeli tak, to kiedy i wobec kogo spoczął obowiązek zawiadomienia o transakcj ach w związku z kupnem akcji emitenta?",
+      "options": {
+        "A": "członek Rady Nadzorczej niezwłocznie i nie później niż w 3 dni robocze po dniu transakcji, powinien powiadomić o transakcji emitenta oraz Komisję Nadzoru Finansowego",
+        "B": "członek Rady Nadzorczej niezwłocznie i nie później niż w 6 dni roboczych po dniu transakcji, powinien powiadomić o transakcji jedynie emitenta",
+        "C": "w przypadku tej transakcji członek Rady Nadzorczej nie miał obowiązku dokonania powiadomienia emitenta ani Komisji Nadzoru Finansowego, ponieważ kwota transakcji nie osiągnęła progu równowartości 10.000 EUR do dnia pierwszej transakcji kupna w 2023 r",
+        "D": "w przypadku tej transakcji członek Rady Nadzorczej nie miał obowiązku dokonania powiadomienia emitenta ani Komisji Nadzoru Finansowego, ponieważ obowiązek ten dotyczy tylko transakcji dokonywanych przez członków zarządu spółek publicznych"
+      },
+      "answer": "A",
+      "answerText": "członek Rady Nadzorczej niezwłocznie i nie później niż w 3 dni robocze po dniu transakcji, powinien powiadomić o transakcji emitenta oraz Komisję Nadzoru Finansowego"
+    },
+    {
+      "id": "q038",
+      "number": 38,
+      "question": "Arbitraż polegający na równoczesnym zajęciu długiej pozycji w kontrakcie forward i krótkiej pozycji na rynku spot, nosi nazwę:",
+      "options": {
+        "A": "reverse cash-and-carry",
+        "B": "cash-and-carry",
+        "C": "pokrycia odsetek (ang. covered interest arbitrage)",
+        "D": "indeksowego (ang. stock index arbitrage)"
+      },
+      "answer": "A",
+      "answerText": "reverse cash-and-carry"
+    },
+    {
+      "id": "q039",
+      "number": 39,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących strategii zarządzania portfelem akcji jest nieprawdziwe:",
+      "options": {
+        "A": "aktywni inwestorzy giełdowi mogą także używać programowania kwadratowego w celu odnalezienia efektywnej linii optymalnych portfeli papierów wartościowych konstruowanych według koncepcji Markowitza",
+        "B": "strategia rotacji sektorowej jest na ogół stosowana przez inwestorów inwestujących w krajowe aktywa finansowe",
+        "C": "głównym celem pasywnego portfela inwestycyjnego jest osiągnięcie z niego ponadprzeciętnej w stosunku do wzorcowych portfeli, skorygowanej kosztami transakcji oraz premiami za ryzyko stopy zwrotu z inwestycji kapitałowych",
+        "D": "inwestorzy, którzy wykorzystują w tworzeniu swoich portfeli metody ilościowe, najczęściej opierają się na technice zwanej długo-krótkookresowym podejściem do inwestowania (long-short approach)"
+      },
+      "answer": "C",
+      "answerText": "głównym celem pasywnego portfela inwestycyjnego jest osiągnięcie z niego ponadprzeciętnej w stosunku do wzorcowych portfeli, skorygowanej kosztami transakcji oraz premiami za ryzyko stopy zwrotu z inwestycji kapitałowych"
+    },
+    {
+      "id": "q040",
+      "number": 40,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi klientem profesjonalnym co do zasady jest: I. towarowy dom maklerski; II. Bank Światowy; III. bank państwowy; IV. zakład ubezpieczeń.",
+      "options": {
+        "A": "(I,II, III, IV)",
+        "B": "(II, IV)",
+        "C": "(II, III, IV)",
+        "D": "(III)"
+      },
+      "answer": "A",
+      "answerText": "(I,II, III, IV)"
+    },
+    {
+      "id": "q041",
+      "number": 41,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie szczegółowych warunków technicznych i organizacyjnych dla firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, i banków powierniczych, firma inwestycyjna, która świadczy usługi wykonywania zleceń nabycia lub zbycia instrumentów rynku niepublicznego, prowadzi dla klienta:",
+      "options": {
+        "A": "rejestr sesji",
+        "B": "ewidencję",
+        "C": "rejestr operacyjny",
+        "D": "rejestr instrumentów niepublicznych"
+      },
+      "answer": "B",
+      "answerText": "ewidencję"
+    },
+    {
+      "id": "q042",
+      "number": 42,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie szczegółowych warunków technicznych i organizacyjnych dla firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, i banków powierniczych, na rachunku odrębnie są rejestrowane co do zasady instrumenty finansowe: I. będące przedmiotem blokady; II. będące przedmiotem zastawu; III. służące jako zabezpieczenie wykonania zobowiązań wynikających z praw majątkowych; IV. służące jako zabezpieczenie wykonania zobowiązań wynikających z pożyczek lub kredytów na nabycie instrumentów finansowych, udzielonych na podstawie odrębnych przepisów.",
+      "options": {
+        "A": "(II, IV)",
+        "B": "(I)",
+        "C": "(II)",
+        "D": "(I, II, III, IV)"
+      },
+      "answer": "D",
+      "answerText": "(I, II, III, IV)"
+    },
+    {
+      "id": "q043",
+      "number": 43,
+      "question": "Inwestor, który zainwestował w strategię synthetic long forward (używając minimalnej liczby naturalnej instrumentów niezbędnych do zbudowania tej strategii), postanowił dodatkowo zająć długą pozycję w opcji sprzedaży (long put) z taką samą ceną wykonania jak dotychczas posiadane instrumenty oraz krótką pozycję w opcji kupna (short call) z wyższą ceną wykonania spośród wszystkich posiadanych i nabytych dotychczas instrumentów, przy czym wszystkie pozostałe istotne parametry instrumentów, o które wzbogacił się portfel inwestora, są identyczne jak instrumentów wchodzących w skład strategii synthetic long forward inwestora. Jaką strategię uzyskał inwestor wskutek powyższych transakcji?",
+      "options": {
+        "A": "strategia bear call spread",
+        "B": "strategia bull call spread",
+        "C": "strategia bear put spread",
+        "D": "strategia bull put spread"
+      },
+      "answer": "B",
+      "answerText": "strategia bull call spread"
+    },
+    {
+      "id": "q044",
+      "number": 44,
+      "question": "Cena instrumentu bazowego wynosiła przed zmianą 26,80 PLN, natomiast po zmianie cena tego samego instrumentu bazowego była równa 28,20 PLN. Jeżeli cena opcji na ten instrument bazowy zmalała w tym samym czasie z poziomu 6,41 PLN do poziomu 5,50 PLN, to ile wynosi współczynnik delta tej opcji?",
+      "options": {
+        "A": "- 1,30",
+        "B": "- 0,65",
+        "C": "-0,17",
+        "D": "0,65"
+      },
+      "answer": "B",
+      "answerText": "- 0,65"
+    },
+    {
+      "id": "q045",
+      "number": 45,
+      "question": "Akcje spółki VVV notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Krok notowania wynosi 0,01. W fazie notowań ciągłych w arkuszu zleceń znajdują się następujące zlecenia: • zlecenie sprzedaży 321 sztuk PKC, • zleceniesprzedaży 432 sztuk z limitem 87,87, • zleceniesprzedaży 543 sztuk z limitem 88,78. Wskaż, po jakim kursie zrealizuje się złożone w tej faziezlecenie kupna 100sztukz limitem 88,00 wiedząc, że kurs ostatniej transakcji w fazie notowań ciągłychwyniósł 87,78, a kurs otwarcia 87,87:",
+      "options": {
+        "A": "87,87",
+        "B": "88,78",
+        "C": "87,70",
+        "D": "87,78"
+      },
+      "answer": "D",
+      "answerText": "87,78"
+    },
+    {
+      "id": "q046",
+      "number": 46,
+      "question": "Jeżeli inwestor zaciągnął w chwili obecnej kredyt w wysokości 840.000 PLN, to jakiej wysokości odsetki zapłaci wraz z 52 ratą, gdy nominalna roczna stopa procentowa wynosi 6,72%, a kredyt spłacany jest wraz z odsetkami w 102 ratach płatnych na koniec każdego miesiąca metodą równych rat kapitałowych?",
+      "options": {
+        "A": "2.306 PLN",
+        "B": "2.352 PLN",
+        "C": "10.587 PLN",
+        "D": "28.224 PLN"
+      },
+      "answer": "B",
+      "answerText": "2.352 PLN"
+    },
+    {
+      "id": "q047",
+      "number": 47,
+      "question": "Miara dochodowości inwestycji w obligacje, określająca oczekiwaną stopę zysku z obligacji, która zostanie przez inwestora sprzedana przed terminem jej wykupu, nosi nazwę:",
+      "options": {
+        "A": "stopy zwrotu w okresie do wykupu",
+        "B": "rzeczywistej (horyzontalnej) stopy zwrotu",
+        "C": "nominalnej stopy zwrotu",
+        "D": "bieżącej stopy zwrotu"
+      },
+      "answer": "B",
+      "answerText": "rzeczywistej (horyzontalnej) stopy zwrotu"
+    },
+    {
+      "id": "q048",
+      "number": 48,
+      "question": "Zgodnie z ustawą o obligacjach emitent może emitować obligacje niepodlegające wykupowi, z zastrzeżeniem określonym w ustawie, uprawniające obligatariusza do otrzymywania odsetek przez czas nieoznaczony. Obligacje takie zwane są:",
+      "options": {
+        "A": "obligacjami bezterminowymi",
+        "B": "obligacjami wieczystymi",
+        "C": "obligacjami podporządkowanymi",
+        "D": "obligacjami partycypacyjnymi"
+      },
+      "answer": "B",
+      "answerText": "obligacjami wieczystymi"
+    },
+    {
+      "id": "q049",
+      "number": 49,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie trybu i warunków postępowania firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, oraz banków powierniczych, w przypadku klienta profesjonalnego: I. przed zawarciem umowy o świadczenie usługi maklerskiej firma inwestycyjna informuje go o zasadach traktowania przez firmę klientów profesjonalnych; II. może on zażądać traktowania go jak klienta detalicznego wskazując zakres usług maklerskich, na których potrzeby chciałby być traktowany jak klient detaliczny; III. może on zażądać traktowania go jak klienta detalicznego wskazując zakres instrumentów finansowych, dla których chciałby być traktowany jak klient detaliczny; IV. może on zażądać traktowania go jak klienta detalicznego wskazując zakres transakcji, na których potrzeby chciałby być traktowany jak klient detaliczny.",
+      "options": {
+        "A": "(I, II, III, IV)",
+        "B": "(II)",
+        "C": "(III)",
+        "D": "(I, III, IV)"
+      },
+      "answer": "A",
+      "answerText": "(I, II, III, IV)"
+    },
+    {
+      "id": "q050",
+      "number": 50,
+      "question": "Zakup kontraktu terminowego (forward) z niższą ceną kontraktu, przy jednoczesnym zakupie jednej opcji sprzedaży (put) i wystawieniu jednej opcji kupna (call), obie z wyższą ceną wykonania (wszystkie pozostałe istotne parametry instrumentów finansowych są tożsame), nosi nazwę strategii:",
+      "options": {
+        "A": "conversion",
+        "B": "reversal",
+        "C": "portfolio insurance",
+        "D": "covered call"
+      },
+      "answer": "A",
+      "answerText": "conversion"
+    },
+    {
+      "id": "q051",
+      "number": 51,
+      "question": "Zgodnie z ustawą Kodeks cywilny nie można czynić ze swego prawa użytku, który by był sprzeczny ze społeczno-gospodarczym przeznaczeniem tego prawa lub z zasadami współżycia społecznego. Takie działanie lub zaniechanie uprawnionego:",
+      "options": {
+        "A": "nie jest uważane za wykonywanie prawa, ale korzysta z ochrony",
+        "B": "nie jest uważane za wykonywanie prawa i nie korzysta z ochrony",
+        "C": "jest uważane za wykonywanie prawa i w szczególnych przypadkach korzysta z ochrony",
+        "D": "jest uważane za wykonywanie prawa, ale nie korzysta z ochrony"
+      },
+      "answer": "B",
+      "answerText": "nie jest uważane za wykonywanie prawa i nie korzysta z ochrony"
+    },
+    {
+      "id": "q052",
+      "number": 52,
+      "question": "W spółce MZB sprzedaż netto wyniosła 198.000 PLN a koszty sprzedaży dóbr wyniosły 84.000 PLN. Przy powyższych danych marża zysku brutto (gross profit margin) wyniosła:",
+      "options": {
+        "A": "54%",
+        "B": "55%",
+        "C": "57%",
+        "D": "59%"
+      },
+      "answer": "C",
+      "answerText": "57%"
+    },
+    {
+      "id": "q053",
+      "number": 53,
+      "question": "Zgodnie z ustawą o rachunkowości, przez jednostkę będącą spółką handlową lub przedsiębiorstwem państwowym, która posiada zaangażowanie w kapitale innej jednostki i wywiera znaczący wpływ na tę jednostkę, rozumie się:",
+      "options": {
+        "A": "znaczącego inwestora",
+        "B": "jednostkę udziałową",
+        "C": "agenta współzależnego",
+        "D": "agenta niezależnego"
+      },
+      "answer": "A",
+      "answerText": "znaczącego inwestora"
+    },
+    {
+      "id": "q054",
+      "number": 54,
+      "question": "Zgodnie z ustawą o nadzorze nad rynkiem finansowym w obszar nadzoru nad rynkiem finansowym nie wchodzi:",
+      "options": {
+        "A": "nadzór nad małymi instytucjami płatniczymi",
+        "B": "nadzór nad pośrednikami kredytu hipotecznego oraz ich agentami",
+        "C": "nadzór na obrotem kryptowalutami",
+        "D": "nadzór w zakresie przewidzianym przepisami prawa dotyczącego dostawców usług finansowania społecznościowego dla przedsięwzięć gospodarczych"
+      },
+      "answer": "C",
+      "answerText": "nadzór na obrotem kryptowalutami"
+    },
+    {
+      "id": "q056",
+      "number": 56,
+      "question": "Zgodnie z Regulaminem Giełdy Papierów Wartościowych w Warszawie S.A., w systemie kursu jednolitego:",
+      "options": {
+        "A": "obowiązują statyczne oraz dynamiczne ograniczenia wahań kursów",
+        "B": "obowiązują wyłącznie statyczne ograniczenia wahań kursów",
+        "C": "nie obowiązują ograniczenia wahań kursów",
+        "D": "obowiązują wyłącznie dynamiczne ograniczenia wahań kursów"
+      },
+      "answer": "B",
+      "answerText": "obowiązują wyłącznie statyczne ograniczenia wahań kursów"
+    },
+    {
+      "id": "q057",
+      "number": 57,
+      "question": "Do metod majątkowych wyceny przedsiębiorstw zalicza się: I. wartość księgowa; II. wartość odtworzeniowa; III. wartość fundamentalna; IV. wartość likwidacyjna. Wersje odpowiedzi:",
+      "options": {
+        "A": "(II, III, IV)",
+        "B": "(I, III, IV)",
+        "C": "(I, II, III)",
+        "D": "(I, II, IV)"
+      },
+      "answer": "D",
+      "answerText": "(I, II, IV)"
+    },
+    {
+      "id": "q058",
+      "number": 58,
+      "question": "Strategia call calendar spread polega na:",
+      "options": {
+        "A": "wystawieniu opcji sprzedaży (put) z krótszym terminem wygaśnięcia oraz zakup opcji sprzedaży (put) z dłuższym terminem wygaśnięcia, przy czym obie opcje mają tę samą cenę wykonania",
+        "B": "wystawieniu opcji sprzedaży (put) z krótszym terminem wygaśnięcia oraz zakup opcji kupna (call) z dłuższym terminem wygaśnięcia, przy czym obie opcje mają tę samą cenę wykonania",
+        "C": "wystawieniu opcji kupna (call) z krótszym terminem wygaśnięcia oraz zakup opcji sprzedaży (put) z dłuższym terminem wygaśnięcia, przy czym obie opcje mają tę samą cenę wykonania",
+        "D": "wystawieniu opcji kupna (call) z krótszym terminem wygaśnięcia oraz zakup opcji kupna (call) z dłuższym terminem wygaśnięcia, przy czym obie opcje mają tę samą cenę wykonania"
+      },
+      "answer": "D",
+      "answerText": "wystawieniu opcji kupna (call) z krótszym terminem wygaśnięcia oraz zakup opcji kupna (call) z dłuższym terminem wygaśnięcia, przy czym obie opcje mają tę samą cenę wykonania"
+    },
+    {
+      "id": "q059",
+      "number": 59,
+      "question": "Akcje spółki QQQ notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych (krok notowań wynosi 0,01). W ostatnim dniu uprawniającym do nabycia akcji, z których przysługuje prawo poboru kurs zamknięcia akcji wyniósł 32,00 zł. Cena emisyjna akcji nowej emisji wyniosła 29,00 zł. Liczba akcji z prawem poboru to 6 mln. Wskaż liczbę akcji nowej emisji wiedząc, że teoretyczna wartość prawa poboru stanowiąca kurs odniesienia wyniosła 1,00 zł:",
+      "options": {
+        "A": "0,5 mln",
+        "B": "1 mln",
+        "C": "2 mln",
+        "D": "3 mln"
+      },
+      "answer": "D",
+      "answerText": "3 mln"
+    },
+    {
+      "id": "q060",
+      "number": 60,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących pełnomocnictwa nie jest zgodne z ustawą Kodeks cywilny:",
+      "options": {
+        "A": "pełnomocnictwo ogólne obejmuje umocowanie do czynności zwykłego zarządu",
+        "B": "jeżeli do ważności czynności prawnej potrzebna jest szczególna forma, pełnomocnictwo do dokonania tej czynności powinno być udzielone w tej samej formie",
+        "C": "okoliczność, że pełnomocnik jest ograniczony w zdolności do czynności prawnych, ma wpływ na ważność czynności dokonanej przez niego w imieniu mocodawcy",
+        "D": "pełnomocnictwo ogólne powinno być pod rygorem nieważności udzielone na piśmie"
+      },
+      "answer": "C",
+      "answerText": "okoliczność, że pełnomocnik jest ograniczony w zdolności do czynności prawnych, ma wpływ na ważność czynności dokonanej przez niego w imieniu mocodawcy"
+    },
+    {
+      "id": "q061",
+      "number": 61,
+      "question": "Jeżeli realna stopa procentowa wynosi 7%, a nominalna stopa procentowa kształtuje się na poziomie 22%, to stopa inflacji równa jest:",
+      "options": {
+        "A": "14%",
+        "B": "15%",
+        "C": "29%",
+        "D": "30%"
+      },
+      "answer": "A",
+      "answerText": "14%"
+    },
+    {
+      "id": "q062",
+      "number": 62,
+      "question": "Wskaż, które z niżej wymienionych stwierdzeń jest zgodne z Zasadami Etyki Zawodowej Maklerów i Doradców:",
+      "options": {
+        "A": "maklerzy i doradcy mogą świadczyć usługi, których realizacja wiązałaby się ze sprzecznym z prawem wykorzystaniem informacji poufnej, tajemnicy zawodowej lub środków pochodzących z przestępstwa",
+        "B": "maklerzy i doradcy nie mogą dla osobistych celów wykorzystywać informacji objętych tajemnicą zawodową ani informacji poufnych",
+        "C": "maklerzy i doradcy mogą nakłaniać inne osoby do naruszanie praw lub Zasad Etyki Zawodowej",
+        "D": "maklerzy i doradcy nie muszą informować swojego pracodawcy o wszelkich dodatkowych świadczeniach uzyskanych w związku z wykonywaniem u niego zawodu"
+      },
+      "answer": "B",
+      "answerText": "maklerzy i doradcy nie mogą dla osobistych celów wykorzystywać informacji objętych tajemnicą zawodową ani informacji poufnych"
+    },
+    {
+      "id": "q063",
+      "number": 63,
+      "question": "Zgodnie z ustawą o rachunkowości, aktywa w formie krajowych środków płatniczych, walut obcych i dewiz zaliczają się do:",
+      "options": {
+        "A": "aktywów wyłączonych z ksiąg rachunkowych",
+        "B": "aktywów pozafinansowych",
+        "C": "zobowiązań bieżących o wysokim ryzyku",
+        "D": "aktywów pieniężnych"
+      },
+      "answer": "D",
+      "answerText": "aktywów pieniężnych"
+    },
+    {
+      "id": "q064",
+      "number": 64,
+      "question": "Ile wynosi stosunek wartości kapitału obcego do kapitału własnego (D/E), jeżeli średni ważony koszt kapitału (WACC) Spółki GG wynosi 10,26%, stopa podatku dochodowego od zysków spółek dla tej Spółki wynosi 25,00%, koszt kapitału obcego dla Spółki GG równy jest stopie wolnej od ryzyka wynoszącej 6,58%, natomiast koszt kapitału własnego to 14,52%?",
+      "options": {
+        "A": "0,2",
+        "B": "0,49",
+        "C": "0,8",
+        "D": "1,25"
+      },
+      "answer": "C",
+      "answerText": "0,8"
+    },
+    {
+      "id": "q065",
+      "number": 65,
+      "question": "Inwestor dysponował na początku okresu inwestycyjnego środkami równymi 7.500 PLN, które postanowił ulokować na 2 lata w dwóch inwestycjach. Na inwestycję A przeznaczył 4.320 PLN, natomiast na inwestycję B pozostałe 3.180 PLN. Jakimi środkami dysponował inwestor po zakończeniu inwestycji A i B oraz jaki średnioroczny zwrot z zainwestowanych 7.500 PLN uzyskał, jeżeli inwestycja A przyniosła -4% zwrotu w pierwszym roku inwestycji oraz 10% zwrotu w drugim roku inwestycji, natomiast inwestycja B przyniosła 12% zwrotu w pierwszym roku inwestycji oraz -5% zwrotu w drugim roku?",
+      "options": {
+        "A": "środki w wysokości 7.079,63 PLN, a średnioroczna stopa zwrotu równa -2,84%",
+        "B": "środki w wysokości 7.945,44 PLN, a średnioroczna stopa zwrotu równa 2,84%",
+        "C": "środki w wysokości 7.079,63 PLN, a średnioroczna stopa zwrotu równa -2,93%",
+        "D": "środki w wysokości 7.945,44 PLN, a średnioroczna stopa zwrotu równa 2,93%"
+      },
+      "answer": "D",
+      "answerText": "środki w wysokości 7.945,44 PLN, a średnioroczna stopa zwrotu równa 2,93%"
+    },
+    {
+      "id": "q066",
+      "number": 66,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących wartości obecnej renty jest nieprawdziwe:",
+      "options": {
+        "A": "im niższa wielkość renty, tym niższa wartość bieżąca renty",
+        "B": "im mniejsza liczba rent, tym większa wartość bieżąca renty",
+        "C": "wartość bieżąca renty płatnej z góry jest równa wartości bieżącej renty płatnej z dołu pomnożonej przez czynnik równy 1 plus stopa procentowa",
+        "D": "im niższa stopa procentowa, tym wyższa wartość bieżąca renty"
+      },
+      "answer": "B",
+      "answerText": "im mniejsza liczba rent, tym większa wartość bieżąca renty"
+    },
+    {
+      "id": "q067",
+      "number": 67,
+      "question": "Zgodnie z ustawą o rachunkowości, jednostki sporządzające sprawozdania finansowe zgodnie z Międzynarodowymi Standardami Rachunkowości, Międzynarodowymi Standardami Sprawozdawczości Finansowej oraz związanymi z nimi interpretacjami ogłoszonymi w formie rozporządzeń Komisji Europejskiej, zwanymi dalej „MSR” :",
+      "options": {
+        "A": "stosują wyłącznie MSR",
+        "B": "stosują wyłącznie przepisy wykonawcze do ustawy o rachunkowości w zakresie nieuregulowanym przez MSR",
+        "C": "stosują przepisy ustawy o rachunkowości oraz przepisy wykonawcze wydane na jej podstawie, w zakresie nieuregulowanym przez MSR",
+        "D": "stosują wyłącznie przepisy ustawy o rachunkowości odnoszące się do sporządzania skonsolidowanych sprawozdań finansowych, w zakresie nieuregulowanym przez MSR"
+      },
+      "answer": "C",
+      "answerText": "stosują przepisy ustawy o rachunkowości oraz przepisy wykonawcze wydane na jej podstawie, w zakresie nieuregulowanym przez MSR"
+    },
+    {
+      "id": "q068",
+      "number": 68,
+      "question": "Zgodnie z ustawą o rachunkowości, w przypadku przekwalifikowania inwestycji zaliczonych do aktywów trwałych do inwestycji krótkoterminowych, gdy jednostka wycenia inwestycje krótkoterminowe wyłącznie w wartości rynkowej, inwestycje zaliczone do aktywów trwałych na dzień ich przekwalifikowania wycenia się według:",
+      "options": {
+        "A": "wartości księgowej",
+        "B": "cenie nabycia",
+        "C": "wartości rynkowej",
+        "D": "wartości godziwej"
+      },
+      "answer": "A",
+      "answerText": "wartości księgowej"
+    },
+    {
+      "id": "q069",
+      "number": 69,
+      "question": "Zgodnie z ustawą o rachunkowości, kapitały (fundusze) własne, z wyjątkiem udziałów (akcji) własnych i kapitału akcyjnego w prostej spółce akcyjnej wycenia się w:",
+      "options": {
+        "A": "cenach nabycia netto",
+        "B": "kosztów wytworzenia brutto",
+        "C": "wartości odpisów amortyzacyjnych",
+        "D": "wartości nominalnej"
+      },
+      "answer": "D",
+      "answerText": "wartości nominalnej"
+    },
+    {
+      "id": "q070",
+      "number": 70,
+      "question": "Zgodnie z ustawą o rachunkowości, przez okres sprawozdawczy rozumie się: I. okres, za który sporządza się sprawozdanie finansowe w trybie przewidzianym ustawą o rachunkowości; II. okres, za który sporządza się wyłącznie uproszczone sprawozdanie z działalności podmiotu w trybie i zakresie wskazanym ustawą o rachunkowości; III. okres, za który sporządza się sprawozdanie inne niż finansowe, na podstawie ksiąg rachunkowych; IV. okres, w którym następuje pełne zużycie aktywów jednostki. Wersje odpowiedzi:",
+      "options": {
+        "A": "(I, IV)",
+        "B": "(I, III)",
+        "C": "(II, III)",
+        "D": "(III, IV)"
+      },
+      "answer": "B",
+      "answerText": "(I, III)"
+    },
+    {
+      "id": "q071",
+      "number": 71,
+      "question": "Akcje spółki KKK notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie kursu jednolitego z dwukrotnym określaniem kursu. Pierwszy kurs jednolity z dzisiejszej sesji wyniósł 3,677. Minimalna wielkość zmiany ceny wynosi 0,001. W fazie przed otwarciem (przed określeniem drugiego kursu jednolitego z dzisiejszej sesji) do pustego arkusza zleceń wpłynęły następujące zlecenia: • zlecenie kupna 85 akcji z limitem 3,678; • zlecenie kupna 25 akcji z limitem 3,720; • zlecenie sprzedaży 110 akcji z limitem 3,676. Proszę wskazać drugi kurs jednolity z dzisiejszej sesji (nie obowiązują ograniczenia wahań kursów):",
+      "options": {
+        "A": "3,720",
+        "B": "3,678",
+        "C": "3,676",
+        "D": "3,677"
+      },
+      "answer": "D",
+      "answerText": "3,677"
+    },
+    {
+      "id": "q072",
+      "number": 72,
+      "question": "Jaką kwotę powinien odkładać inwestor na koniec każdego następnego półrocza na swoje konto oszczędnościowe oprocentowane 14% w skali roku, z półroczną kapitalizacją odsetek, żeby po 7 latach zgromadzić kwotę równą 244.898,43 PLN?",
+      "options": {
+        "A": "10.860 PLN",
+        "B": "17.198 PLN",
+        "C": "23.024 PLN",
+        "D": "40.197 PLN"
+      },
+      "answer": "A",
+      "answerText": "10.860 PLN"
+    },
+    {
+      "id": "q073",
+      "number": 73,
+      "question": "Zgodnie z ustawą Kodeks spółek handlowych spółką handlową nie jest:",
+      "options": {
+        "A": "spółka jawna",
+        "B": "prosta spółka akcyjna",
+        "C": "spółka cywilna",
+        "D": "spółka partnerska"
+      },
+      "answer": "C",
+      "answerText": "spółka cywilna"
+    },
+    {
+      "id": "q074",
+      "number": 74,
+      "question": "Inwestor zaciągnął kredyt inwestycyjny na 10 lat spłacany w kwartalnych ratach metodą równych rat kapitałowo-odsetkowych. Jakiej wysokości kredyt zaciągnął inwestor, jeżeli kwartalna rata kapitałowo-odsetkowa, jaką płaci inwestor równa jest 6.450 PLN, a roczna stopa procentowa kształtuje się na poziomie 16% (raty będą płacone z dołu)?",
+      "options": {
+        "A": "43.930,31 PLN",
+        "B": "53.689,80 PLN",
+        "C": "76.999,46 PLN",
+        "D": "127.663,56 PLN"
+      },
+      "answer": "D",
+      "answerText": "127.663,56 PLN"
+    },
+    {
+      "id": "q075",
+      "number": 75,
+      "question": "Akcje spółki ZZZ notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs otwarcia został ustalony na poziomie 99,00. Kurs ostatniej transakcji wyniósł 101,00. Minimalna wielkość zmiany ceny to 0,01. W fazie notowań ciągłych arkusz zleceń przedstawiał się następująco: KUPNO LIMIT SPRZEDAZ --- 100,00 700 --- 99,00 800 400 98,70 --- 600 98,60 --- Wskaż, które z poniższych zleceń może zostać wprowadzone jako kolejne do arkusza zleceń zgodnie z zasadami obowiązującymi na Giełdzie i po wprowadzeniu będzie podlegało częściowej lub całkowitej realizacji. Nie obowiązują ograniczenia wahań kursów. I. zlecenie sprzedaży o wolumenie 10 z limitem 101,00 i oznaczeniem WDA; II. zlecenie kupna o wolumenie 30 bez limitu realizacji i limitem aktywacji 101,00; III. zlecenie sprzedaży o wolumenie 300 z limitem 98,65 i oznaczeniem MWW= 200; IV. zlecenie kupna o wolumenie 500 bez limitu ceny z oznaczeniem WLA.",
+      "options": {
+        "A": "zlecenie I i zlecenie IV",
+        "B": "zlecenie II i zlecenie III",
+        "C": "zlecenie III i zlecenie IV",
+        "D": "zlecenie IV"
+      },
+      "answer": "C",
+      "answerText": "zlecenie III i zlecenie IV"
+    },
+    {
+      "id": "q076",
+      "number": 76,
+      "question": "Wskaż, które z poniższych postaci krzywej dochodowości, w ramach analizy struktury terminowej stóp procentowych, jest w stanie wyjaśnić teoria segmentacji rynku: I. krzywa normalną (ang. normal curve); II. krzywa odwrócona (ang. inverted curve); III. krzywa płaska (ang. flat curve); IV. krzywa łukowata (ang. humped curve). Wersje odpowiedzi:",
+      "options": {
+        "A": "(I)",
+        "B": "(I, II)",
+        "C": "(I, II, III)",
+        "D": "(I, II, III, IV)"
+      },
+      "answer": "D",
+      "answerText": "(I, II, III, IV)"
+    },
+    {
+      "id": "q077",
+      "number": 77,
+      "question": "Kontrakty na walutę X notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs ostatniej transakcji wynosi 5,3223. Minimalna wielkość zmiany ceny wynosi 0,0001. Arkusz zleceń w fazie notowań ciągłych przedstawiał się następująco: KUPNO LIMIT SPRZEDAZ --- 5,3225 100 --- 5,3223 100 5,3220 --- 100 5,3200 100 --- Wskaż wszystkie z poniższych zleceń, które mogą zostać wprowadzone do arkusza zleceń zgodnie z zasadami obowiązującymi na Giełdzie: I. kupno 100 sztuk z limitem realizacji PKC i limitem aktywacji 5,3223; II. sprzedaż 200 sztuk z limitem realizacji PKC i limitem aktywacji 5,3222; III. kupno 100 sztuk z limitem realizacji 5,3223 i limitem aktywacji 5,3225; IV. sprzedaż 100 sztuk z limitem realizacji 5,3223 i limitem aktywacji 5,3220.",
+      "options": {
+        "A": "tylko zlecenie I",
+        "B": "tylko zlecenie II",
+        "C": "tylko zlecenia II, III",
+        "D": "wszystkie zlecenia (I, II, III, IV)"
+      },
+      "answer": "B",
+      "answerText": "tylko zlecenie II"
+    },
+    {
+      "id": "q078",
+      "number": 78,
+      "question": "Jaką kwotę powinien odkładać inwestor na koniec każdego kolejnego kwartału na swoje konto oszczędnościowe oprocentowane roczną stopą procentową równą 8% (odsetki kapitalizowane są kwartalnie), żeby po 15 latach oszczędzania zgromadzić kwotę równą dokładnie 2.082.580,39 PLN?",
+      "options": {
+        "A": "18.260 PLN",
+        "B": "28.751 PLN",
+        "C": "104.006 PLN",
+        "D": "129.378 PLN"
+      },
+      "answer": "A",
+      "answerText": "18.260 PLN"
+    },
+    {
+      "id": "q079",
+      "number": 79,
+      "question": "W Spółce RRR w 2022 r. w wyniku wzrostu popytu, sprzedaż produktu wzrosła do poziomu 20.000 szt., przy cenie jednostkowej 10 PLN, jednostkowym koszcie zmiennym 4 PLN oraz całkowitych kosztach stałych 14.000 PLN. Przy powyższych danych wskaźnik dźwigni operacyjnej wyniósł:",
+      "options": {
+        "A": "1,13",
+        "B": "1,42",
+        "C": "1,52",
+        "D": "1,21"
+      },
+      "answer": "A",
+      "answerText": "1,13"
+    },
+    {
+      "id": "q080",
+      "number": 80,
+      "question": "W ocenie rentowności portfela inwestycji, miara wskazująca, o ile lepszą rentowność ma dany portfel w stosunku do portfela wybranego w wyniku zastosowania modelu polityki „kupuj i trzymaj” i o takim samym ryzyku, nosi nazwę:",
+      "options": {
+        "A": "wskaźnika dywersyfikacji",
+        "B": "wskaźnika selektywności",
+        "C": "wskaźnika ryzyka",
+        "D": "wskaźnika Famy"
+      },
+      "answer": "B",
+      "answerText": "wskaźnika selektywności"
+    },
+    {
+      "id": "q081",
+      "number": 81,
+      "question": "Inwestor chce zainwestować w opcje na akcje spółki zajmującej się produkcją sprzętu wojskowego, która ma w najbliższym czasie podpisać duży kontrakt. Mając na uwadze, że spodziewany kontrakt powinien mieć dużą marżowość, inwestor oczekuje, że kurs akcji tej spółki istotnie wzrośnie w jego horyzoncie inwestycyjnym. Jaką strategię powinien zastosować inwestor o dużym apetycie na ryzyko, chcący osiągnąć zysk w przypadku realizacji jego oczekiwań (należy pominąć koszty transakcyjne)?",
+      "options": {
+        "A": "strategię put ratio backspread",
+        "B": "strategię long condor",
+        "C": "strategię long strap",
+        "D": "strategię short strap"
+      },
+      "answer": "C",
+      "answerText": "strategię long strap"
+    },
+    {
+      "id": "q082",
+      "number": 82,
+      "question": "Jeżeli inwestor wpłacił w chwili obecnej na swoje konto oszczędnościowe z półroczną kapitalizacją odsetek kwotę w wysokości 26.275,34 PLN, to jaką roczną stopą procentową powinno być oprocentowane to konto oszczędnościowe, aby mógł wybierać kwotę 2.600 PLN na koniec każdego półrocza przez 8 kolejnych lat?",
+      "options": {
+        "A": "6%",
+        "B": "8%",
+        "C": "12%",
+        "D": "16%"
+      },
+      "answer": "C",
+      "answerText": "12%"
+    },
+    {
+      "id": "q083",
+      "number": 83,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie trybu i warunków postępowania firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, oraz banków powierniczych, przez dłużne papiery wartościowe, które mają wbudowany instrument pochodny rozumie się: I. obligacje zamienne i warunkowe obligacje zamienne; II. obligacje wymienne; III. obligacje o zmiennym nominale, z wyłączeniem obligacji ratalnych; IV. warranty subskrypcyjne.",
+      "options": {
+        "A": "(I, II)",
+        "B": "(I, II, IV)",
+        "C": "(III)",
+        "D": "(I, II, III, IV)"
+      },
+      "answer": "D",
+      "answerText": "(I, II, III, IV)"
+    },
+    {
+      "id": "q084",
+      "number": 84,
+      "question": "Ile wynosi średni ważony koszt kapitału spółki DFG, jeżeli współczynnik Beta tej spółki równy jest 1,8, stosunek wartości kapitału obcego do kapitału własnego (D/E) wynosi 0,65, koszt długu kształtuje się na poziomie 4,95%, stopa wolna od ryzyka równa jest 3,90%, zwrot z portfela rynkowego to 8,15%, a stawka podatku dochodowego od zysków spółek równa jest 40%?",
+      "options": {
+        "A": "8,17%",
+        "B": "11,55%",
+        "C": "19,72%",
+        "D": "22,24%"
+      },
+      "answer": "A",
+      "answerText": "8,17%"
+    },
+    {
+      "id": "q085",
+      "number": 85,
+      "question": "Wskaż, które stwierdzenie dotyczące czasu trwania (ang. duration) obligacji jest nieprawdziwe:",
+      "options": {
+        "A": "wypłata odsetek obligacji oznacza spadek (niewielki) duration",
+        "B": "jeśli w pewnym okresie nie występują płatności z tytułu posiadania obligacji, a YTM się nie zmienia, to duration zmniejsza się dokładnie o długość tego okresu",
+        "C": "duration obligacji z odsetkami jest mniejsze niż długość do terminu wykupu",
+        "D": "duration może w przybliżeniu określać zmiany ceny obligacji przy zmieniającej się stopie dochodu obligacji"
+      },
+      "answer": "A",
+      "answerText": "wypłata odsetek obligacji oznacza spadek (niewielki) duration"
+    },
+    {
+      "id": "q086",
+      "number": 86,
+      "question": "W spółce PROC zysk netto wynosi 12.500 PLN, wskaźnik zwrotu z kapitału (ROC) wynosi 5% a stopa zwrotu z kapitału własnego (ROE) wynosi 10%. Przy powyższych wielkościach, wartość księgowa kapitału obcego (D) wynosi:",
+      "options": {
+        "A": "12.500 PLN",
+        "B": "125.000 PLN",
+        "C": "25.000 PLN",
+        "D": "50.000 PLN"
+      },
+      "answer": "B",
+      "answerText": "125.000 PLN"
+    },
+    {
+      "id": "q087",
+      "number": 87,
+      "question": "Członek Rady Nadzorczej spółki publicznej X (emitenta) notowanej na rynku regulowanym prowadzonym przez Giełdę Papierów Wartościowych w Warszawie S.A. kupił w dniu 5 września 2022 r. na rachunek kolegi akcje spółki publicznej X za kwotę o równowartości 8.000 EUR. Zgodnie z harmonogramem przekazanym do publicznej wiadomości emitent miał opublikować raport półroczny za 2022 r. w dniu 30 września 2022 r. Zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) nr 596/2014 z dnia 16 kwietnia 2014 r. w sprawie nadużyć na rynku (rozporządzenie w sprawie nadużyć na rynku) oraz uchylające dyrektywę 2003/6/WE Parlamentu Europejskiego i Rady i dyrektywy Komisji 2003/124/WE, 2003/125/WE i 2004/72/WE, wskaż, które z poniższych stwierdzeń jest poprawne w odniesieniu do transakcji członka Rady Nadzorczej?:",
+      "options": {
+        "A": "członek Rady Nadzorczej mógł dokonać tej transakcji, ponieważ była ona dokonana poza okresem zamkniętym",
+        "B": "członek Rady Nadzorczej mógł dokonać tej transakcji, ponieważ nie dokonywał transakcji na swój rachunek, tylko na rachunek kolegi",
+        "C": "członek Rady Nadzorczej mógł dokonać tej transakcji, ponieważ nie przekraczała ona progu określonego w przepisach prawa",
+        "D": "członek Rady Nadzorczej nie mógł dokonać tej transakcji, ponieważ była ona dokonana w okresie zamkniętym"
+      },
+      "answer": "D",
+      "answerText": "członek Rady Nadzorczej nie mógł dokonać tej transakcji, ponieważ była ona dokonana w okresie zamkniętym"
+    },
+    {
+      "id": "q088",
+      "number": 88,
+      "question": "Zgodnie z ustawą o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi rejestr funduszy inwestycyjnych prowadzi:",
+      "options": {
+        "A": "Komisja Nadzoru Finansowego",
+        "B": "Krajowy Sąd Rejestrowy",
+        "C": "Sąd Okręgowy w Warszawie",
+        "D": "Krajowy Depozyt Papierów Wartościowych"
+      },
+      "answer": "C",
+      "answerText": "Sąd Okręgowy w Warszawie"
+    },
+    {
+      "id": "q089",
+      "number": 89,
+      "question": "Akcje spółki FFF notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs otwarcia został ustalony na poziomie 56,60. Minimalna wielkość zmiany ceny to 0,05. W fazie notowań ciągłych arkusz zleceń przedstawiał się następująco: KUPNO LIMIT SPRZEDAŻ --- 60,20 28 --- 58,90 32 50 57,65 90 50,20 — --- Wskaż, które z poniższych zleceń może zostać wprowadzone jako kolejne do arkusza zleceń zgodnie z zasadami obowiązującymi na Giełdzie i po wprowadzeniu będzie podlegało całkowitej natychmiastowej realizacji. Nie obowiązują ograniczenia wahań kursów.",
+      "options": {
+        "A": "zlecenie kupna 62 akcji z limitem 59,90",
+        "B": "zlecenie kupna 50 akcji z limitem 61,00 i MWW = 30",
+        "C": "zlecenie sprzedaży 20 akcji po kursie 57,00 z warunkiem WNF",
+        "D": "zlecenie sprzedaży 150 akcji po kursie 50,20 w warunkiem WLA"
+      },
+      "answer": "B",
+      "answerText": "zlecenie kupna 50 akcji z limitem 61,00 i MWW = 30"
+    },
+    {
+      "id": "q090",
+      "number": 90,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP wskaż zdanie prawdziwe dotyczące transakcji pakietowych:",
+      "options": {
+        "A": "transakcje pakietowe instrumentami dłużnymi mogą być zawierane po zawarciu pierwszej transakcji giełdowej tymi instrumentami w systemie notowań ciągłych lub w systemie kursu jednolitego",
+        "B": "przedmiotem transakcji pakietowych mogą być jednostki uczestnictwa",
+        "C": "przedmiotem transakcji pakietowych mogą być instrumenty finansowe notowane w systemie animatora rynku",
+        "D": "warunkiem zawarcia transakcji pakietowej jest złożenie do systemu transakcyjnego giełdy przez co najmniej jednego członka giełdy zlecenia kupna oraz zlecenia sprzedaży tej samej liczby instrumentów finansowych będących przedmiotem transakcji pakietowej, po tej samej cenie i z tą samą datą rozliczenia"
+      },
+      "answer": "D",
+      "answerText": "warunkiem zawarcia transakcji pakietowej jest złożenie do systemu transakcyjnego giełdy przez co najmniej jednego członka giełdy zlecenia kupna oraz zlecenia sprzedaży tej samej liczby instrumentów finansowych będących przedmiotem transakcji pakietowej, po tej samej cenie i z tą samą datą rozliczenia"
+    },
+    {
+      "id": "q091",
+      "number": 91,
+      "question": "Jeżeli wsteczny wskaźnik cena/zysk (ang. trailing P/E, liczony, jako bieżąca cena akcji do bieżącego zysku na akcję) spółki JJ równy jest 3,64, oczekiwana stopa wzrostu dywidendy wynosi 4%, a wymagana stopa zwrotu z akcji tej spółki kształtuje się na poziomie 7,92%, to ile wynosi stopa zysków zatrzymanych (ang. retention rate) spółki JJ?",
+      "options": {
+        "A": "13,72%",
+        "B": "21,64%",
+        "C": "86,28%",
+        "D": "92,08%"
+      },
+      "answer": "C",
+      "answerText": "86,28%"
+    },
+    {
+      "id": "q092",
+      "number": 92,
+      "question": "Akcje spółki TT wyceniane są zgodnie z modelem Gordona na 2.769,00 PLN, przy wymaganej stopie zwrotu dla akcji tej spółki równej 7,20% oraz wskaźnikowi wypłaty dywidendy (ang. dividend payout ratio) na poziomie 60%. Ile wynosi stopa zwrotu z kapitału własnego (ROE), jeżeli prognozowana na koniec roku dywidenda osiąga wartość 138,45 PLN?",
+      "options": {
+        "A": "3,67%",
+        "B": "5,50%",
+        "C": "9,40%",
+        "D": "40,00%"
+      },
+      "answer": "B",
+      "answerText": "5,50%"
+    },
+    {
+      "id": "q093",
+      "number": 93,
+      "question": "W Spółce RACH wartość aktywów jednostki na dzień sporządzenia sprawozdania finansowego wyniosła 10 mln PLN a wartość jej kapitału (funduszu) własnego 4 mln PLN. Zgodnie z ustawą o rachunkowości wartość aktywów netto Spółki RACH wynosi:",
+      "options": {
+        "A": "10 mln PLN",
+        "B": "4 mln PLN",
+        "C": "6 mln PLN",
+        "D": "3 mln PLN"
+      },
+      "answer": "B",
+      "answerText": "4 mln PLN"
+    },
+    {
+      "id": "q094",
+      "number": 94,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi spółka prowadząca rynek regulowany, posiadająca zezwolenie na prowadzenie rynku regulowanego, może instalować na terytorium innego państwa członkowskiego systemy informatyczne i urządzenia techniczne, umożliwiające dostęp do rynku regulowanego podmiotom prowadzącym działalność na terytorium innego państwa członkowskiego:",
+      "options": {
+        "A": "po uzyskaniu zezwolenia właściwego organu nadzoru z innego państwa członkowskiego",
+        "B": "po uzyskaniu zgody Komisji Nadzoru Finansowego",
+        "C": "po zawiadomieniu Komisji Nadzoru Finansowego o takim zamiarze",
+        "D": "może instalować bez konieczności spełnienia dodatkowych warunków"
+      },
+      "answer": "C",
+      "answerText": "po zawiadomieniu Komisji Nadzoru Finansowego o takim zamiarze"
+    },
+    {
+      "id": "q095",
+      "number": 95,
+      "question": "Jeżeli indeks zyskowności (ang. profitability index) danego projektu równy jest 1, to:",
+      "options": {
+        "A": "nie można określić jaką decyzję należy podjąć w związku z projektem",
+        "B": "akceptujemy projekt do realizacji",
+        "C": "odrzucamy projekt, ze względu na spadek wartości przedsiębiorstwa wskutek realizacji tego projektu",
+        "D": "odrzucamy projekt, ze względu na brak przyrostu wartości wskutek realizacji tego projektu"
+      },
+      "answer": "D",
+      "answerText": "odrzucamy projekt, ze względu na brak przyrostu wartości wskutek realizacji tego projektu"
+    },
+    {
+      "id": "q096",
+      "number": 96,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących rodzajów zleceń maklerskich, nie jest zgodne z Regulaminem Giełdy Papierów Wartościowych w Warszawie S.A.:",
+      "options": {
+        "A": "zlecenie PKC nie zawiera limitu ceny; w trakcie notowań ciągłych zlecenie PKC realizowane jest po najlepszych możliwych cenach zleceń przeciwstawnych oczekujących na realizację w arkuszu zleceń",
+        "B": "zlecenie LIMIT zawiera limit ceny i może być realizowane wyłącznie po cenie określonej w tym limicie albo po cenie wyższej - w przypadku zlecenia kupna albo po cenie niższej - w przypadku zlecenia sprzedaży",
+        "C": "zlecenie PEG zawiera zmienny limit ceny, który przyjmuje wartość równą limitowi ceny najlepszego zlecenia po tej samej stronie w arkuszu zleceń",
+        "D": "zlecenie PCR nie zawiera limitu ceny; w trakcie notowań ciągłych zlecenie PCR realizowane jest po najlepszej możliwej cenie zlecenia przeciwstawnego oczekującego na realizację w arkuszu zleceń"
+      },
+      "answer": "B",
+      "answerText": "zlecenie LIMIT zawiera limit ceny i może być realizowane wyłącznie po cenie określonej w tym limicie albo po cenie wyższej - w przypadku zlecenia kupna albo po cenie niższej - w przypadku zlecenia sprzedaży"
+    },
+    {
+      "id": "q097",
+      "number": 97,
+      "question": "Akcje spółki PPP notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs otwarcia na tej sesji wyniósł 91,80. Minimalna wielkość zmiany ceny to 0,1. W fazie notowań ciągłych arkusz zleceń wyglądał następująco: KUPNO LIMIT SPRZEDAZ --- 92,00 500 --- 91,00 500 500 90,70 --- 500 89,60 --- Wskaż, które z poniższych działań mogą zostać dokonane w fazie notowań ciągłych: I. modyfikacja limitu ceny kupna z 90,70 na 90,75; II. modyfikacja limitu ceny sprzedaży z 92,00 na 92,01; III. złożenie zlecenia kupna z limitem 92,12 i wolumenem 100; IV. złożenie zlecenia sprzedaży z limitem 90,70 i wolumenem 50.",
+      "options": {
+        "A": "działanie I, II, III, IV",
+        "B": "działanie I, II",
+        "C": "działanie III",
+        "D": "działanie IV"
+      },
+      "answer": "D",
+      "answerText": "działanie IV"
+    },
+    {
+      "id": "q098",
+      "number": 98,
+      "question": "Który z poniższych przepływów pieniężnych ma w chwili obecnej największą wartość?",
+      "options": {
+        "A": "486 PLN za 6 lat dyskontowane roczną stopą procentową równą 15%",
+        "B": "488 PLN za 8 lat dyskontowane roczną stopą procentową równą 11%",
+        "C": "490 PLN za 11 lat dyskontowane roczną stopą procentową równą 8%",
+        "D": "492 PLN za 29 lat dyskontowane roczną stopą procentową równą 3%"
+      },
+      "answer": "B",
+      "answerText": "488 PLN za 8 lat dyskontowane roczną stopą procentową równą 11%"
+    },
+    {
+      "id": "q099",
+      "number": 99,
+      "question": "Akcje spółki FFF notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Na podstawie poniższych zleceń złożonych w fazie przed zamknięciem proszę wskazać kurs zamknięcia. Kurs odniesienia: 8,00 Minimalna wielkość zmiany ceny: 0,1 KUPNO LIMIT SPRZEDAŻ 10 PKC 20 PCR PCR",
+      "options": {
+        "A": "20,00",
+        "B": "10,00",
+        "C": "8,00",
+        "D": "kurs zamknięcia nie zostanie określony"
+      },
+      "answer": "C",
+      "answerText": "8,00"
+    },
+    {
+      "id": "q100",
+      "number": 100,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi papierami wartościowymi nie są:",
+      "options": {
+        "A": "certyfikaty inwestycyjne",
+        "B": "warranty subskrypcyjne",
+        "C": "kwity depozytowe",
+        "D": "udziały w spółkach z o.o"
+      },
+      "answer": "D",
+      "answerText": "udziały w spółkach z o.o"
+    },
+    {
+      "id": "q101",
+      "number": 101,
+      "question": "Rozliczenia międzyokresowe przychodów, dokonywane z zachowaniem zasady ostrożności nie obejmują:",
+      "options": {
+        "A": "równowartości otrzymanych lub należnych od kontrahentów środków z tytułu świadczeń, których wykonanie nastąpi w następnych okresach sprawozdawczych",
+        "B": "środków pieniężnych otrzymanych na sfinansowanie nabycia lub wytworzenia środków trwałych",
+        "C": "ujemnej wartości firmy",
+        "D": "kapitału własnego jednostki"
+      },
+      "answer": "D",
+      "answerText": "kapitału własnego jednostki"
+    },
+    {
+      "id": "q102",
+      "number": 102,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP wprowadzenia obligacji skarbowych (obligacji Skarbu Państwa) do obrotu giełdowego dokonuje:",
+      "options": {
+        "A": "Przewodniczący sesji na wniosek Zarządu Giełdy",
+        "B": "Rada Giełdy na wniosek Ministra Finansów",
+        "C": "Przewodniczący sesji na wniosek Ministra Finansów",
+        "D": "Zarząd Giełdy na wniosek Ministra Finansów"
+      },
+      "answer": "D",
+      "answerText": "Zarząd Giełdy na wniosek Ministra Finansów"
+    },
+    {
+      "id": "q103",
+      "number": 103,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących stopy dochodu w okresie do wykupu (YTM) obligacji jest nieprawdziwe:",
+      "options": {
+        "A": "stopa dochodu obligacji (YTM) to nic innego, jak wewnętrzna stopa zwrotu (IRR)",
+        "B": "stopa dochodu obligacji (YTM) jest to stopa dochodu oczekiwana przez inwestora, przy założeniu, że kupi obligację po cenie rynkowej, przetrzyma tę obligację do wykupu, a odsetki reinwestuje przy stopie równej stopie dochodu w okresie do wykupu (YTM)",
+        "C": "jeśli stopa dochodu obligacji (YTM) nie zmienia się, to wielkość dyskonta lub premii zwiększa się w miarę zbliżania się do terminu wykupu, przy czym zwiększanie następuje w coraz szybszym tempie",
+        "D": "wzrost wartości obligacji wywołany spadkiem stopy dochodu o 1 pkt proc. jest wyższy niż spadek wartości obligacji wywołany wzrostem stopy dochodu o 1 pkt proc"
+      },
+      "answer": "C",
+      "answerText": "jeśli stopa dochodu obligacji (YTM) nie zmienia się, to wielkość dyskonta lub premii zwiększa się w miarę zbliżania się do terminu wykupu, przy czym zwiększanie następuje w coraz szybszym tempie"
+    },
+    {
+      "id": "q104",
+      "number": 104,
+      "question": "Zgodnie z Regulaminem Giełdy Papierów Wartościowych w Warszawie S.A., w systemie notowań ciągłych kurs otwarcia oraz kurs zamknięcia określany jest, z zastrzeżeniem określonym w Regulaminie, na podstawie następujących zleceń maklerskich:",
+      "options": {
+        "A": "1) zleceń LIMIT, 2) zleceń PKC, 3) zleceń PCR",
+        "B": "1) zleceń PKC, 2) zleceń STOP",
+        "C": "1) zleceń LIMIT, 2) zleceń PKC, 3) zleceń PEG",
+        "D": "1) zleceń LIMIT, 2) zleceń PCR, 3) zleceń STOP"
+      },
+      "answer": "A",
+      "answerText": "1) zleceń LIMIT, 2) zleceń PKC, 3) zleceń PCR"
+    },
+    {
+      "id": "q105",
+      "number": 105,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi zobowiązanie się do zbycia papierów wartościowych w transakcji zawartej w obrocie zorganizowanym, przed dokonaniem ich zapisu na rachunku papierów wartościowych zbywcy, jest dopuszczalne, o ile: I. następuje w ramach tej samej transakcji, w której zbywcazobowiązał się i stałsię uprawniony do nabycia tej samej liczby takich samychpapierówwartościowych, a rozrachunek nabycia nastąpi nie później niż rozrachunek zbycia; II. zostały one uprzednio nabyte w wyniku transakcji zawartej na zagranicznym rynku regulowanym; III.zostały one uprzednio przeniesione przez zbywcę na podstawie umowy pożyczki papierów wartościowych lub z zastrzeżeniem prawa odkupu, a rozrachunek ich zwrotu lub odkupu nastąpi nie później niż rozrachunek zbycia.",
+      "options": {
+        "A": "(I, III)",
+        "B": "(III)",
+        "C": "(I)",
+        "D": "(I, II, III)"
+      },
+      "answer": "D",
+      "answerText": "(I, II, III)"
+    },
+    {
+      "id": "q106",
+      "number": 106,
+      "question": "Wskaż, które z poniższych stwierdzeń dotyczących współczynnika wrażliwości Gamma, będącego jednym ze współczynników greckich określających wrażliwość parametrów opcji, jest nieprawdziwe:",
+      "options": {
+        "A": "najwyższe wartości współczynnik Gamma przyjmuje dla opcji OTM (out-of-the-money) znajdujących się daleko od terminu wygaśnięcia",
+        "B": "współczynnik Gamma przyjmuje wartości nieujemne",
+        "C": "współczynnik Gamma odniesiony do wartości instrumentu bazowego wynosi 0",
+        "D": "współczynnik Gamma określa wrażliwość współczynnika Delta na zmiany ceny instrumentu bazowego"
+      },
+      "answer": "A",
+      "answerText": "najwyższe wartości współczynnik Gamma przyjmuje dla opcji OTM (out-of-the-money) znajdujących się daleko od terminu wygaśnięcia"
+    },
+    {
+      "id": "q107",
+      "number": 107,
+      "question": "Zgodnie ze specyfikacją zawartą w Szczegółowych Zasadach Obrotu Giełdowego w systemie UTP, instrument OW20L231300 jest:",
+      "options": {
+        "A": "opcją call na WIG20 o terminie wykonania przypadającym w miesiącu grudniu",
+        "B": "opcją call na WIG20 o terminie wykonania przypadającym w miesiącu listopadzie",
+        "C": "opcją put na WIG20 o terminie wykonania przypadającym w miesiącu styczniu",
+        "D": "opcją put na WIG20 o terminie wykonania przypadającym w miesiącu listopadzie"
+      },
+      "answer": "A",
+      "answerText": "opcją call na WIG20 o terminie wykonania przypadającym w miesiącu grudniu"
+    },
+    {
+      "id": "q108",
+      "number": 108,
+      "question": "Zgodnie ze Szczegółowymi Zasadami Obrotu Giełdowego w systemie UTP oraz zasadami notowań w systemie notowań ciągłych prawdą jest że:",
+      "options": {
+        "A": "w fazie otwarcia mogą być przyjmowane nowe zlecenia",
+        "B": "w fazie zamknięcia zlecenia mogą być anulowane",
+        "C": "w fazie dogrywki możliwe jest składanie wyłącznie zleceń LIMIT",
+        "D": "w fazie notowań ciągłych zlecenia nie mogą być modyfikowane"
+      },
+      "answer": "C",
+      "answerText": "w fazie dogrywki możliwe jest składanie wyłącznie zleceń LIMIT"
+    },
+    {
+      "id": "q109",
+      "number": 109,
+      "question": "Wskaż, które z niżej wymienionych stwierdzeń odnoszących się do obligacji, nie jest zgodne z ustawą o obligacjach:",
+      "options": {
+        "A": "za zobowiązania wynikające z obligacji emitent odpowiada całym swoim majątkiem",
+        "B": "po ustaleniu uprawnionych do świadczeń z tytułu wykupu obligacji prawa z tej obligacji mogą być przenoszone",
+        "C": "obligacje mogą emitować spółki komandytowo-akcyjne",
+        "D": "obligacje podlegają emisji w formie zdematerializowanej"
+      },
+      "answer": "B",
+      "answerText": "po ustaleniu uprawnionych do świadczeń z tytułu wykupu obligacji prawa z tej obligacji mogą być przenoszone"
+    },
+    {
+      "id": "q110",
+      "number": 110,
+      "question": "Walne Zgromadzenie Spółki publicznej X zostało zwołane na dzień 24 maja 2023 r. Zgodnie z ustawą Kodeks spółek handlowych wskaż na jaki dzień, osoby będące akcjonariuszami spółki publicznej mają prawo uczestniczenia w walnym zgromadzeniu Spółki publicznej X (dzień rejestracji uczestnictwa w walnym zgromadzeniu):",
+      "options": {
+        "A": "8 maja 2023 r",
+        "B": "10 maja 2023 r",
+        "C": "17 maja 2023 r",
+        "D": "24 maja 2023 r"
+      },
+      "answer": "A",
+      "answerText": "8 maja 2023 r"
+    },
+    {
+      "id": "q111",
+      "number": 111,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi zezwolenie na prowadzenie rynku regulowanego wydaje:",
+      "options": {
+        "A": "minister właściwy do spraw instytucji finansowych",
+        "B": "Komisja Europejska",
+        "C": "Komisja Nadzoru Finansowego",
+        "D": "minister właściwy do spraw gospodarki"
+      },
+      "answer": "C",
+      "answerText": "Komisja Nadzoru Finansowego"
+    },
+    {
+      "id": "q112",
+      "number": 112,
+      "question": "Racjonowanie „miękkie” (ang. soft rationing), występujące w analizie projektów inwestycyjnych, w zagadnieniu racjonowania kapitału, ma miejsce wówczas, gdy:",
+      "options": {
+        "A": "występują wewnętrzne przyczyny racjonowania kapitału",
+        "B": "występują zewnętrzne przyczyny racjonowania kapitału",
+        "C": "nie dochodzi do limitowania nakładów inwestycyjnych",
+        "D": "racjonowanie dotyczy jednego okresu"
+      },
+      "answer": "A",
+      "answerText": "występują wewnętrzne przyczyny racjonowania kapitału"
+    },
+    {
+      "id": "q113",
+      "number": 113,
+      "question": "Jeżeli inwestor odkłada po 6.400 PLN na koniec każdego półrocza na swoje konto oszczędnościowe z półroczną kapitalizacją odsetek, to jaką kwotę uzbiera po 6 latach oszczędzania, jeżeli oprocentowanie tego konta wynosi 12% w skali roku?",
+      "options": {
+        "A": "24.934,40 PLN",
+        "B": "44.641,92 PLN",
+        "C": "51.937,28 PLN",
+        "D": "107.967,36 PLN"
+      },
+      "answer": "D",
+      "answerText": "107.967,36 PLN"
+    },
+    {
+      "id": "q114",
+      "number": 114,
+      "question": "Obligacja callable to inaczej:",
+      "options": {
+        "A": "obligacja zamienna na akcje",
+        "B": "obligacja przychodowa",
+        "C": "obligacja z prawem do wcześniejszego wykupu przysługującym obligatariuszowi",
+        "D": "obligacja z prawem do wcześniejszego wykupu przysługującym emitentowi"
+      },
+      "answer": "D",
+      "answerText": "obligacja z prawem do wcześniejszego wykupu przysługującym emitentowi"
+    },
+    {
+      "id": "q115",
+      "number": 115,
+      "question": "Zgodnie z ustawą o obrocie instrumentami finansowymi dom maklerski może prowadzić działalność jako dostawca usług w zakresie udostępniania informacji:",
+      "options": {
+        "A": "po uzyskaniu zezwolenia Komisji Nadzoru Finansowego",
+        "B": "po zawiadomieniu Komisji Nadzoru Finansowego",
+        "C": "może prowadzić taką działalność bez konieczności spełnienia dodatkowych warunków",
+        "D": "nie może prowadzić takiej działalności"
+      },
+      "answer": "A",
+      "answerText": "po uzyskaniu zezwolenia Komisji Nadzoru Finansowego"
+    },
+    {
+      "id": "q116",
+      "number": 116,
+      "question": "Zgodnie z ustawą o rachunkowości, przepisy tej ustawy stosuje się w odniesieniu do alternatywnych spółek inwestycyjnych w rozumieniu przepisów o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi:",
+      "options": {
+        "A": "jeżeli przychody tych podmiotów przekroczą 25 mln PLN",
+        "B": "jeżeli przychody tych podmiotów przekroczą 25 mln EURO",
+        "C": "jeżeli przychody tych podmiotów mieszczą się w przedziale od 5 mln do 25 mln EUR",
+        "D": "bez względu na wielkość przychodów"
+      },
+      "answer": "D",
+      "answerText": "bez względu na wielkość przychodów"
+    },
+    {
+      "id": "q117",
+      "number": 117,
+      "question": "Oczekiwany zwrot z akcji spółki UU równy jest 10,48%, podczas gdy stopa wolna od ryzyka kształtuje się na poziomie 6,74%. Ile wynosi zwrot z portfela rynkowego, jeżeli kowariancja pomiędzy zwrotami z akcji spółki UU a zwrotami z portfela rynkowego wynosi 0,041 natomiast wariancja zwrotów z portfela rynkowego równa jest 0,082?",
+      "options": {
+        "A": "6,59%",
+        "B": "7,48%",
+        "C": "8,61%",
+        "D": "14,22%"
+      },
+      "answer": "D",
+      "answerText": "14,22%"
+    },
+    {
+      "id": "q118",
+      "number": 118,
+      "question": "Akcje spółki BBB notowane są na Giełdzie Papierów Wartościowych w Warszawie S.A. w systemie notowań ciągłych. Kurs otwarcia został ustalony na poziomie 3,400. Kurs ostatniej transakcji wynosi 3,440. Minimalna wielkość zmiany ceny wynosi 0,002. Arkusz zleceń w fazie notowań ciągłych przedstawiał się następująco: KUPNO LIMIT SPRZEDAZ --- 3,500 1.000 --- 3,458 705 3,444 501 3,440 404 3,404 Wskaż, które z poniższych zleceń może zostać wprowadzone do arkusza zleceń zgodnie z zasadami obowiązującymi na Giełdzie:",
+      "options": {
+        "A": "kupno 20 sztuk z limitem realizacji 3,459 i limitem aktywacji 3,440",
+        "B": "kupno 20 sztuk z limitem realizacji 3,440 i limitem aktywacji 3,400",
+        "C": "kupno 20 sztuk z limitem realizacji 3,500 i limitem aktywacji 3,500",
+        "D": "kupno 20 sztuk z limitem realizacji 3,458 i limitem aktywacji 3,600"
+      },
+      "answer": "C",
+      "answerText": "kupno 20 sztuk z limitem realizacji 3,500 i limitem aktywacji 3,500"
+    },
+    {
+      "id": "q119",
+      "number": 119,
+      "question": "Zgodnie z ustawą o nadzorze nad rynkiem finansowym nadzór nad działalnością Urzędu Komisji Nadzoru Finansowego sprawuje:",
+      "options": {
+        "A": "Minister Finansów",
+        "B": "Prezes Rady Ministrów",
+        "C": "Rada Ministrów",
+        "D": "Przewodniczący Komisji Nadzoru Finansowego"
+      },
+      "answer": "B",
+      "answerText": "Prezes Rady Ministrów"
+    },
+    {
+      "id": "q120",
+      "number": 120,
+      "question": "Zgodnie z rozporządzeniem Ministra Finansów w sprawie szczegółowych warunków technicznych i organizacyjnych dla firm inwestycyjnych, banków, o których mowa w art. 70 ust. 2 ustawy o obrocie instrumentami finansowymi, i banków powierniczych, firma inwestycyjna świadcząca usługi przechowywania lub rejestrowania instrumentów finansowych oraz prowadzenia rachunków pieniężnych jest obowiązana do: I. przechowywania lub rejestrowania aktywów klienta w taki sposób, aby możliwe było w każdej chwili wyodrębnienie aktywów przechowywanych na rzecz jednego klienta od aktywów innego klienta oraz od aktywów własnych firmy inwestycyjnej; II. podejmowania działań niezbędnych dla zapewnienia, że posiadane przez firmę inwestycyjną dane dotyczące rodzaju i liczby instrumentów finansowych oraz wysokości środków pieniężnych należących do klienta są rzetelne, dokładne i zgodne ze stanem faktycznym; III. powierzania instrumentów finansowych lub środków pieniężnych klienta do przechowywania przez inny podmiot wyłącznie pod warunkiem, że podmiot ten zapewnia przechowywanie lub rejestrowanie tych aktywów odrębnie od aktywów firmy inwestycyjnej oraz odrębnie od aktywów tego podmiotu; IV. regularnego sprawdzania stanu prowadzonych przez firmę inwestycyjną rachunków lub ewidencji, lub rejestrów z rachunkami, ewidencjami i rejestrami prowadzonymi przez podmiot przechowujący aktywa na zlecenie firmy inwestycyjnej.",
+      "options": {
+        "A": "(I)",
+        "B": "(I, III)",
+        "C": "(I, II, III, IV)",
+        "D": "(IV)._______ Numer Odpowiedź Numer Odpowiedź Numer Odpowiedź Numer Odpowiedź pytania prawidłowa pytania prawidłowa pytania prawidłowa pytania prawidłowa"
+      },
+      "answer": "C",
+      "answerText": "(I, II, III, IV)"
+    }
+  ]
+}

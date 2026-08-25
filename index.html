@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>KNF - Panel</title>
+<style>
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: start center; padding: 24px;
+    background: #f4f5f7; color: #16181d;
+    font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  .card {
+    width: 100%; max-width: 560px; background: #fff; border: 1px solid #d8dbe0;
+    border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,.07);
+  }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
+       color: #6b7280; margin: 26px 0 10px; }
+  .sub { margin: 0 0 20px; color: #6b7280; font-size: 13px; }
+  label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 500; }
+  input[type=email], input[type=password] {
+    width: 100%; padding: 10px 12px; margin-bottom: 14px; font-size: 15px;
+    border: 1px solid #d8dbe0; border-radius: 8px; box-sizing: border-box;
+  }
+  input[type=file] {
+    width: 100%; font-size: 13px; padding: 10px; margin-bottom: 12px;
+    border: 1px dashed #c3c8d0; border-radius: 8px; background: #fafbfc;
+    box-sizing: border-box; cursor: pointer;
+  }
+  button { width: 100%; padding: 11px; font-size: 15px; font-weight: 600; cursor: pointer;
+           color: #fff; background: #2563eb; border: 0; border-radius: 8px; margin-bottom: 10px; }
+  button.ghost { background: #fff; color: #2563eb; border: 1px solid #d8dbe0; }
+  button:disabled { opacity: .5; cursor: default; }
+  .msg { padding: 10px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 16px;
+         background: #fdecec; color: #a01b1b; border: 1px solid #f2c2c2; }
+  .msg.ok { background: #eaf6ee; color: #1a6b34; border-color: #bfe0cb; }
+  .test { display: flex; align-items: center; gap: 10px; padding: 8px 0;
+          border-bottom: 1px solid #eee; font-size: 14px; }
+  .test .name { flex: 1; }
+  .test .state { font-size: 12px; color: #6b7280; min-width: 74px; text-align: right; }
+  .test .state.done { color: #1a6b34; }
+  .test button { width: auto; margin: 0; padding: 5px 11px; font-size: 12px; font-weight: 500; }
+  select {
+    width: 100%; padding: 10px 12px; margin-bottom: 12px; font-size: 15px;
+    border: 1px solid #d8dbe0; border-radius: 8px; box-sizing: border-box;
+    background: #fff; color: #16181d; cursor: pointer;
+  }
+  .hidden { display: none; }
+  .uid { font: 12px ui-monospace, Consolas, monospace; background: #f4f5f7;
+         padding: 8px; border-radius: 6px; word-break: break-all; user-select: all; }
+  .note { font-size: 12px; color: #9aa2ad; margin: 0 0 12px; }
+  .bar { height: 6px; border-radius: 99px; background: #e6e8ec; overflow: hidden; margin: 4px 0 14px; }
+  .bar > i { display: block; height: 100%; width: 0; background: #2563eb; transition: width .2s; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- LOGIN -->
+  <div id="loginBox">
+    <h1>Logowanie</h1>
+    <p class="sub">Egzamin na Maklera Papierów Wartościowych</p>
+    <div id="loginErr" class="msg hidden"></div>
+    <form id="loginForm">
+      <label>E-mail</label>
+      <input type="email" id="email" required>
+      <label>Hasło</label>
+      <input type="password" id="password" required>
+      <button type="submit">Zaloguj się</button>
+    </form>
+  </div>
+
+  <!-- PANEL -->
+  <div id="panel" class="hidden">
+    <h1>Panel</h1>
+    <p class="sub">Zalogowano jako <b id="who"></b></p>
+
+    <div id="err" class="msg hidden"></div>
+    <div id="ok" class="msg ok hidden"></div>
+
+    <button id="goQuiz">Rozwiązuj pytania</button>
+
+    <h2>Wgraj wybrany test</h2>
+    <select id="pick"></select>
+    <button id="uploadPick">Wgraj ten test</button>
+
+    <div class="bar"><i id="bar"></i></div>
+    <p class="note" id="progress">&nbsp;</p>
+
+    <h2>Stan bazy</h2>
+    <div id="tests"></div>
+    <button id="uploadAll" class="ghost" style="margin-top:12px;">Wgraj wszystkie brakujące naraz</button>
+
+    <h2>Wgraj test z pliku</h2>
+    <p class="note">Plik JSON z <code>parse_pdf_to_json.py</code> (opcjonalne — testy powyżej są już wbudowane).</p>
+    <input type="file" id="file" accept=".json,application/json">
+    <button id="uploadFile" disabled>Wgraj wybrany plik</button>
+
+    <h2>Konto</h2>
+    <button id="logout" class="ghost">Wyloguj się</button>
+    <p class="note" style="margin-top:14px;">Twój UID:</p>
+    <p class="uid" id="uid">-</p>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+<script src="alltests.js"></script>
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBjg6qDO4AG6LvRomoGe8Al8Gjk_N2rPlw",
+  authDomain: "knfquestions.firebaseapp.com",
+  projectId: "knfquestions",
+  storageBucket: "knfquestions.firebasestorage.app",
+  messagingSenderId: "820771001390",
+  appId: "1:820771001390:web:f62c15dbc743a8b6f5fbbf",
+});
+
+var auth = firebase.auth();
+var db = firebase.firestore();
+var $ = function (id) { return document.getElementById(id); };
+var BATCH_SIZE = 400;              // Firestore allows max 500 writes per batch
+
+var picked = null;                 // test chosen with the file picker
+var remoteCounts = {};             // examId -> how many questions are in Firestore
+
+function examIdOf(meta) {
+  if (meta.examId) return meta.examId;
+  var setNo = (String(meta.set || "").match(/[0-9]+/) || ["1"])[0];
+  return String(meta.date).replace(/-/g, "") + "-z" + setNo;
+}
+
+// ---- login ----------------------------------------------------------------
+$("loginForm").onsubmit = function (e) {
+  e.preventDefault();
+  $("loginErr").classList.add("hidden");
+  auth.signInWithEmailAndPassword($("email").value.trim(), $("password").value)
+    .catch(function (err) {
+      $("loginErr").textContent = "Nie udało się zalogować: " + err.code;
+      $("loginErr").classList.remove("hidden");
+    });
+};
+$("logout").onclick = function () { auth.signOut(); };
+$("goQuiz").onclick = function () { location.href = "quiz.html"; };
+
+auth.onAuthStateChanged(function (user) {
+  if (user) {
+    $("who").textContent = user.email;
+    $("uid").textContent = user.uid;
+    $("loginBox").classList.add("hidden");
+    $("panel").classList.remove("hidden");
+    refresh();
+  } else {
+    $("panel").classList.add("hidden");
+    $("loginBox").classList.remove("hidden");
+  }
+});
+
+// ---- what is already in Firestore -----------------------------------------
+function refresh() {
+  renderTests();
+  db.collection("exams").get()
+    .then(function (snap) {
+      remoteCounts = {};
+      snap.docs.forEach(function (d) {
+        var v = d.data();
+        remoteCounts[v.examId || d.id] = v.count || 0;
+      });
+      renderTests();
+    })
+    .catch(fail);
+}
+
+function renderPicker() {
+  var sel = $("pick");
+  var keep = sel.value;
+  sel.textContent = "";
+  ALL_TESTS.forEach(function (t, i) {
+    var id = examIdOf(t.meta);
+    var have = remoteCounts[id];
+    var mark = have === t.questions.length ? "w bazie"
+             : (have ? have + "/" + t.questions.length : "brak");
+    var o = document.createElement("option");
+    o.value = String(i);
+    o.textContent = t.meta.date + "  -  " + t.questions.length + " pytań  (" + mark + ")";
+    sel.appendChild(o);
+  });
+  if (keep) sel.value = keep;
+}
+
+function renderTests() {
+  renderPicker();
+  var box = $("tests");
+  box.textContent = "";
+  ALL_TESTS.forEach(function (t) {
+    var id = examIdOf(t.meta);
+    var have = remoteCounts[id];
+    var uploaded = have === t.questions.length;
+
+    var row = document.createElement("div");
+    row.className = "test";
+
+    var name = document.createElement("span");
+    name.className = "name";
+    name.textContent = t.meta.date + "  (" + t.questions.length + " pytań)";
+
+    var state = document.createElement("span");
+    state.className = "state" + (uploaded ? " done" : "");
+    state.textContent = uploaded ? "w bazie"
+      : (have ? have + "/" + t.questions.length : "brak");
+
+    var btn = document.createElement("button");
+    btn.className = "ghost";
+    btn.textContent = uploaded ? "Wgraj ponownie" : "Wgraj";
+    btn.onclick = function () { uploadTests([t]); };
+
+    row.appendChild(name);
+    row.appendChild(state);
+    row.appendChild(btn);
+    box.appendChild(row);
+  });
+}
+
+// ---- upload ---------------------------------------------------------------
+// Document IDs are fixed (exam id + question number), so re-uploading a test
+// overwrites its documents instead of creating duplicates.
+function uploadTests(list) {
+  if (!list.length) { showOk("Wszystkie testy są już w bazie."); return; }
+  setBusy(true);
+  $("err").classList.add("hidden");
+  $("ok").classList.add("hidden");
+
+  var totalQ = list.reduce(function (n, t) { return n + t.questions.length; }, 0);
+  var done = 0;
+  var chain = Promise.resolve();
+
+  list.forEach(function (t) {
+    var id = examIdOf(t.meta);
+    for (var i = 0; i < t.questions.length; i += BATCH_SIZE) {
+      (function (slice, first) {
+        chain = chain.then(function () {
+          var batch = db.batch();
+          slice.forEach(function (q) {
+            var docId = id + "-q" + String(q.number).padStart(3, "0");
+            batch.set(db.collection("questions").doc(docId), {
+              examId: id,
+              examName: t.meta.exam || "",
+              examDate: t.meta.date,
+              examSet: t.meta.set || "",
+              number: q.number,
+              question: q.question,
+              options: q.options,
+              answer: q.answer,
+              answerText: q.answerText || "",
+            });
+          });
+          if (first) {
+            batch.set(db.collection("exams").doc(id), {
+              examId: id,
+              name: t.meta.exam || "",
+              date: t.meta.date,
+              set: t.meta.set || "",
+              source: t.meta.source || "",
+              count: t.questions.length,
+            });
+          }
+          return batch.commit().then(function () {
+            done += slice.length;
+            $("bar").style.width = Math.round((done / totalQ) * 100) + "%";
+            $("progress").textContent = "Wgrano " + done + " z " + totalQ + " pytań...";
+          });
+        });
+      })(t.questions.slice(i, i + BATCH_SIZE), i === 0);
+    }
+  });
+
+  chain.then(function () {
+    $("progress").textContent = "";
+    $("bar").style.width = "0";
+    showOk("Wgrano " + totalQ + " pytań z " + list.length + " test(ów).");
+    refresh();
+  })
+  .catch(function (err) { $("progress").textContent = ""; fail(err); })
+  .then(function () { setBusy(false); });
+}
+
+$("uploadPick").onclick = function () {
+  var t = ALL_TESTS[Number($("pick").value)];
+  if (t) uploadTests([t]);
+};
+
+$("uploadAll").onclick = function () {
+  uploadTests(ALL_TESTS.filter(function (t) {
+    return remoteCounts[examIdOf(t.meta)] !== t.questions.length;
+  }));
+};
+
+function setBusy(b) {
+  $("uploadAll").disabled = b;
+  $("uploadPick").disabled = b;
+  $("pick").disabled = b;
+  $("uploadFile").disabled = b || !picked;
+  Array.prototype.forEach.call($("tests").querySelectorAll("button"), function (x) {
+    x.disabled = b;
+  });
+}
+
+// ---- file picker (for a one-off test not in the bundle) --------------------
+$("file").onchange = function (ev) {
+  var f = ev.target.files[0];
+  picked = null;
+  $("uploadFile").disabled = true;
+  $("err").classList.add("hidden");
+  if (!f) return;
+  var reader = new FileReader();
+  reader.onload = function () {
+    try {
+      var json = JSON.parse(reader.result);
+      validate(json);
+      picked = json;
+      $("uploadFile").disabled = false;
+    } catch (e) {
+      showErr("Nieprawidłowy plik: " + e.message);
+    }
+  };
+  reader.readAsText(f, "utf-8");
+};
+
+function validate(json) {
+  if (!json || !json.meta || !Array.isArray(json.questions)) throw new Error("brak meta/questions");
+  if (!json.meta.date) throw new Error("brak meta.date");
+  if (!json.questions.length) throw new Error("pusta lista pytań");
+  json.questions.forEach(function (q) {
+    if (typeof q.number !== "number") throw new Error("pytanie bez numeru");
+    if (!q.question) throw new Error("pytanie " + q.number + ": brak treści");
+    if (!q.answer || "ABCD".indexOf(q.answer) < 0) throw new Error("pytanie " + q.number + ": zła odpowiedź");
+    if (!q.options || !q.options.A || !q.options.B || !q.options.C || !q.options.D) {
+      throw new Error("pytanie " + q.number + ": brak opcji A-D");
+    }
+  });
+}
+
+$("uploadFile").onclick = function () { if (picked) uploadTests([picked]); };
+
+// ---- messages -------------------------------------------------------------
+function showErr(t) { $("err").textContent = t; $("err").classList.remove("hidden"); }
+function showOk(t) { $("ok").textContent = t; $("ok").classList.remove("hidden"); }
+
+function fail(err) {
+  showErr(
+    err.code === "permission-denied"
+      ? "Brak uprawnień. Wgraj reguły z firestore.rules w konsoli Firebase."
+    : err.code === "failed-precondition" || err.code === "not-found"
+      ? "Baza Firestore nie istnieje. Console → Firestore Database → Create database."
+    : "Błąd: " + (err.code || err.message)
+  );
+  console.error(err);
+}
+</script>
+</body>
+</html>

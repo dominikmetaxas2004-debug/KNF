@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>KNF - Pytania</title>
+<style>
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: start center; padding: 24px;
+    background: #f4f5f7; color: #16181d;
+    font: 16px/1.6 system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  .card {
+    width: 100%; max-width: 720px; background: #fff; border: 1px solid #d8dbe0;
+    border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,.07);
+  }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  .sub { margin: 0 0 20px; color: #6b7280; font-size: 13px; }
+  button {
+    width: 100%; padding: 11px; font-size: 15px; font-weight: 600; cursor: pointer;
+    color: #fff; background: #2563eb; border: 0; border-radius: 8px; margin-bottom: 10px;
+  }
+  button.ghost { background: #fff; color: #2563eb; border: 1px solid #d8dbe0; }
+  button:disabled { opacity: .6; cursor: default; }
+  .msg { padding: 10px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 16px;
+         background: #fdecec; color: #a01b1b; border: 1px solid #f2c2c2; }
+  .hidden { display: none; }
+
+  /* quiz */
+  .bar-top {
+    display: flex; justify-content: space-between; font-size: 13px;
+    color: #6b7280; margin-bottom: 14px;
+  }
+  .stem { font-size: 17px; margin: 0 0 20px; }
+  .opt {
+    display: flex; gap: 12px; width: 100%; text-align: left; padding: 12px 14px;
+    margin-bottom: 9px; font-size: 15px; font-weight: 400; line-height: 1.45;
+    color: #16181d; background: #fff; border: 1px solid #d8dbe0; border-radius: 9px;
+    cursor: pointer;
+  }
+  .opt:hover:not(:disabled) { border-color: #2563eb; background: #f7f9ff; }
+  .opt .letter { font-weight: 700; color: #6b7280; flex: none; }
+  .opt.correct { background: #eaf6ee; border-color: #4caf72; color: #14532d; }
+  .opt.correct .letter { color: #1a6b34; }
+  .opt.wrong { background: #fdecec; border-color: #e57373; color: #7f1d1d; }
+  .opt.wrong .letter { color: #a01b1b; }
+  .opt:disabled { cursor: default; opacity: 1; }
+  .verdict { font-weight: 600; margin: 16px 0 12px; }
+  .verdict.good { color: #1a6b34; }
+  .verdict.bad { color: #a01b1b; }
+  .score { font-size: 15px; }
+  .score b { font-variant-numeric: tabular-nums; }
+  .hint { font-size: 12px; color: #9aa2ad; margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- LOGIN -->
+  <div id="loginBox" class="hidden">
+    <h1>Logowanie</h1>
+    <p class="sub">Zaloguj się, aby rozwiązywać pytania</p>
+    <div id="loginErr" class="msg hidden"></div>
+    <form id="loginForm">
+      <label>E-mail</label>
+      <input type="email" id="email" required style="width:100%;padding:10px 12px;margin-bottom:14px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
+      <label>Hasło</label>
+      <input type="password" id="password" required style="width:100%;padding:10px 12px;margin-bottom:14px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
+      <button type="submit">Zaloguj się</button>
+    </form>
+  </div>
+
+  <!-- START -->
+  <div id="startBox" class="hidden">
+    <h1>Pytania egzaminacyjne</h1>
+    <p class="sub" id="startSub">Ładowanie pytań...</p>
+    <div id="err" class="msg hidden"></div>
+    <button id="start" disabled>Start</button>
+    <button id="logout" class="ghost">Wyloguj się</button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quizBox" class="hidden">
+    <div class="bar-top">
+      <span id="pos"></span>
+      <span class="score">Poprawne: <b id="good">0</b> / <b id="asked">0</b></span>
+    </div>
+    <p class="stem" id="stem"></p>
+    <div id="opts"></div>
+    <p class="verdict hidden" id="verdict"></p>
+    <button id="next" class="hidden">Następne pytanie</button>
+    <button id="quit" class="ghost">Zakończ</button>
+    <p class="hint">Skrót: A/B/C/D lub 1-4 aby odpowiedzieć, Enter aby przejść dalej.</p>
+  </div>
+
+  <!-- DONE -->
+  <div id="doneBox" class="hidden">
+    <h1>Koniec</h1>
+    <p class="sub" id="doneSub"></p>
+    <button id="again">Jeszcze raz</button>
+    <button id="home" class="ghost">Powrót</button>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBjg6qDO4AG6LvRomoGe8Al8Gjk_N2rPlw",
+  authDomain: "knfquestions.firebaseapp.com",
+  projectId: "knfquestions",
+  storageBucket: "knfquestions.firebasestorage.app",
+  messagingSenderId: "820771001390",
+  appId: "1:820771001390:web:f62c15dbc743a8b6f5fbbf",
+});
+
+var auth = firebase.auth();
+var db = firebase.firestore();
+var $ = function (id) { return document.getElementById(id); };
+var LETTERS = ["A", "B", "C", "D"];
+
+var all = [];       // every question from Firestore
+var deck = [];      // shuffled queue for this run
+var i = 0;          // index into deck
+var good = 0;       // correct so far
+var asked = 0;      // answered so far
+var locked = false; // true once an answer is picked
+
+function show(which) {
+  ["loginBox", "startBox", "quizBox", "doneBox"].forEach(function (id) {
+    $(id).classList.toggle("hidden", id !== which);
+  });
+}
+
+// ---- auth -----------------------------------------------------------------
+$("loginForm").onsubmit = function (e) {
+  e.preventDefault();
+  $("loginErr").classList.add("hidden");
+  auth.signInWithEmailAndPassword($("email").value.trim(), $("password").value)
+    .catch(function (err) {
+      $("loginErr").textContent = "Nie udało się zalogować: " + err.code;
+      $("loginErr").classList.remove("hidden");
+    });
+};
+$("logout").onclick = function () { auth.signOut(); };
+
+auth.onAuthStateChanged(function (user) {
+  if (!user) { show("loginBox"); return; }
+  show("startBox");
+  load();
+});
+
+// ---- load questions -------------------------------------------------------
+function load() {
+  $("start").disabled = true;
+  $("startSub").textContent = "Ładowanie pytań...";
+  db.collection("questions").get()
+    .then(function (snap) {
+      all = snap.docs.map(function (d) { return d.data(); });
+      if (!all.length) {
+        $("startSub").textContent = "Brak pytań w bazie.";
+        $("err").textContent = "Najpierw wgraj pytania na stronie index.html.";
+        $("err").classList.remove("hidden");
+        return;
+      }
+      $("startSub").textContent = all.length + " pytań w bazie. Kolejność losowa.";
+      $("start").disabled = false;
+    })
+    .catch(function (err) {
+      $("startSub").textContent = "Błąd wczytywania.";
+      $("err").textContent = "Błąd: " + (err.code || err.message);
+      $("err").classList.remove("hidden");
+      console.error(err);
+    });
+}
+
+// ---- quiz flow ------------------------------------------------------------
+function shuffle(a) {                       // Fisher-Yates
+  a = a.slice();
+  for (var j = a.length - 1; j > 0; j--) {
+    var k = Math.floor(Math.random() * (j + 1));
+    var t = a[j]; a[j] = a[k]; a[k] = t;
+  }
+  return a;
+}
+
+function begin() {
+  deck = shuffle(all);
+  i = 0; good = 0; asked = 0;
+  $("good").textContent = "0";
+  $("asked").textContent = "0";
+  show("quizBox");
+  render();
+}
+$("start").onclick = begin;
+$("again").onclick = begin;
+$("home").onclick = function () { show("startBox"); };
+$("quit").onclick = finish;
+
+function render() {
+  locked = false;
+  var q = deck[i];
+  $("pos").textContent = "Pytanie " + (i + 1) + " z " + deck.length;
+  $("stem").textContent = q.number + ". " + q.question;
+  $("verdict").classList.add("hidden");
+  $("next").classList.add("hidden");
+
+  var box = $("opts");
+  box.textContent = "";
+  LETTERS.forEach(function (L) {
+    var b = document.createElement("button");
+    b.className = "opt";
+    b.innerHTML = "";
+    var s = document.createElement("span");
+    s.className = "letter";
+    s.textContent = L + ".";
+    var t = document.createElement("span");
+    t.textContent = q.options[L];
+    b.appendChild(s);
+    b.appendChild(t);
+    b.onclick = function () { answer(L); };
+    b.dataset.letter = L;
+    box.appendChild(b);
+  });
+}
+
+function answer(picked) {
+  if (locked) return;
+  locked = true;
+  var q = deck[i];
+  var right = picked === q.answer;
+
+  asked++;
+  if (right) good++;
+  $("good").textContent = good;
+  $("asked").textContent = asked;
+
+  var buttons = $("opts").querySelectorAll("button");
+  Array.prototype.forEach.call(buttons, function (b) {
+    b.disabled = true;
+    if (b.dataset.letter === q.answer) b.classList.add("correct");
+    else if (b.dataset.letter === picked) b.classList.add("wrong");
+  });
+
+  var v = $("verdict");
+  v.textContent = right
+    ? "Dobrze!"
+    : "Źle. Poprawna odpowiedź to " + q.answer + ".";
+  v.className = "verdict " + (right ? "good" : "bad");
+  v.classList.remove("hidden");
+
+  $("next").textContent = (i + 1 < deck.length) ? "Następne pytanie" : "Zobacz wynik";
+  $("next").classList.remove("hidden");
+}
+
+$("next").onclick = function () {
+  if (i + 1 < deck.length) { i++; render(); }
+  else finish();
+};
+
+function finish() {
+  var pct = asked ? Math.round((good / asked) * 100) : 0;
+  $("doneSub").textContent =
+    "Poprawne odpowiedzi: " + good + " z " + asked + " (" + pct + "%).";
+  show("doneBox");
+}
+
+// ---- keyboard shortcuts ---------------------------------------------------
+document.addEventListener("keydown", function (e) {
+  if ($("quizBox").classList.contains("hidden")) return;
+  var k = e.key.toUpperCase();
+  if (!locked && LETTERS.indexOf(k) >= 0) { answer(k); return; }
+  if (!locked && k >= "1" && k <= "4") { answer(LETTERS[+k - 1]); return; }
+  if (locked && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); $("next").click(); }
+});
+</script>
+</body>
+</html>
