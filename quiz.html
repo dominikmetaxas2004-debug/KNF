@@ -2,7 +2,9 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f7">
+<meta name="mobile-web-app-capable" content="yes">
 <link rel="icon" href="data:,">
 <title>KNF - Pytania</title>
 <style>
@@ -52,6 +54,19 @@
   .score { font-size: 15px; }
   .score b { font-variant-numeric: tabular-nums; }
   .hint { font-size: 12px; color: #9aa2ad; margin-top: 14px; }
+
+  /* phone: edge-to-edge card, bigger tap targets, no keyboard hint */
+  @media (max-width: 640px) {
+    body { padding: 0; font-size: 17px; }
+    .card {
+      max-width: none; min-height: 100vh; border: 0; border-radius: 0;
+      box-shadow: none; padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+    }
+    .stem { font-size: 17px; }
+    .opt { padding: 14px 15px; font-size: 16px; }
+    button { padding: 14px; font-size: 16px; }
+    .hint { display: none; }
+  }
 </style>
 </head>
 <body>
