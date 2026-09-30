@@ -18,6 +18,8 @@
     border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,.07);
   }
   h1 { margin: 0 0 4px; font-size: 20px; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
+       color: #6b7280; margin: 22px 0 10px; }
   .sub { margin: 0 0 20px; color: #6b7280; font-size: 13px; }
   button {
     width: 100%; padding: 11px; font-size: 15px; font-weight: 600; cursor: pointer;
@@ -29,11 +31,35 @@
          background: #fdecec; color: #a01b1b; border: 1px solid #f2c2c2; }
   .hidden { display: none; }
 
+  /* mode switch */
+  .seg { display: flex; gap: 0; margin-bottom: 4px; }
+  .seg button {
+    flex: 1; margin: 0; border-radius: 0; font-size: 14px; font-weight: 500;
+    background: #fff; color: #16181d; border: 1px solid #d8dbe0;
+  }
+  .seg button:first-child { border-radius: 8px 0 0 8px; }
+  .seg button:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+  .seg button.on { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 600; }
+  .segnote { font-size: 12px; color: #9aa2ad; margin: 0 0 6px; }
+
+  /* test list */
+  .item {
+    display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+    padding: 13px 15px; margin-bottom: 8px; font-size: 15px; font-weight: 500;
+    color: #16181d; background: #fff; border: 1px solid #d8dbe0; border-radius: 9px;
+    cursor: pointer;
+  }
+  .item:hover:not(:disabled) { border-color: #2563eb; background: #f7f9ff; }
+  .item .grow { flex: 1; }
+  .item .count { font-size: 13px; font-weight: 400; color: #6b7280; }
+  .item.all { border-color: #2563eb; color: #1d4ed8; }
+
   /* quiz */
   .bar-top {
-    display: flex; justify-content: space-between; font-size: 13px;
-    color: #6b7280; margin-bottom: 14px;
+    display: flex; justify-content: space-between; gap: 10px; font-size: 13px;
+    color: #6b7280; margin-bottom: 6px;
   }
+  .which { font-size: 12px; color: #9aa2ad; margin: 0 0 14px; }
   .stem { font-size: 17px; margin: 0 0 20px; }
   .opt {
     display: flex; gap: 12px; width: 100%; text-align: left; padding: 12px 14px;
@@ -51,8 +77,7 @@
   .verdict { font-weight: 600; margin: 16px 0 12px; }
   .verdict.good { color: #1a6b34; }
   .verdict.bad { color: #a01b1b; }
-  .score { font-size: 15px; }
-  .score b { font-variant-numeric: tabular-nums; }
+  .score { font-variant-numeric: tabular-nums; }
   .hint { font-size: 12px; color: #9aa2ad; margin-top: 14px; }
 
   /* phone: edge-to-edge card, bigger tap targets, no keyboard hint */
@@ -64,7 +89,9 @@
     }
     .stem { font-size: 17px; }
     .opt { padding: 14px 15px; font-size: 16px; }
+    .item { padding: 15px; font-size: 16px; }
     button { padding: 14px; font-size: 16px; }
+    .seg button { padding: 11px; }
     .hint { display: none; }
   }
 </style>
@@ -80,20 +107,30 @@
     <div id="loginErr" class="msg hidden"></div>
     <form id="loginForm">
       <label>E-mail</label>
-      <input type="email" id="email" required style="width:100%;padding:10px 12px;margin-bottom:14px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
+      <input type="email" id="email" required style="width:100%;padding:10px 12px;margin-bottom:14px;font-size:16px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
       <label>Hasło</label>
-      <input type="password" id="password" required style="width:100%;padding:10px 12px;margin-bottom:14px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
+      <input type="password" id="password" required style="width:100%;padding:10px 12px;margin-bottom:14px;font-size:16px;border:1px solid #d8dbe0;border-radius:8px;box-sizing:border-box;">
       <button type="submit">Zaloguj się</button>
     </form>
   </div>
 
-  <!-- START -->
-  <div id="startBox" class="hidden">
+  <!-- PICK A TEST -->
+  <div id="pickBox" class="hidden">
     <h1>Pytania egzaminacyjne</h1>
-    <p class="sub" id="startSub">Ładowanie pytań...</p>
+    <p class="sub" id="pickSub">Ładowanie...</p>
     <div id="err" class="msg hidden"></div>
-    <button id="start" disabled>Start</button>
-    <button id="logout" class="ghost">Wyloguj się</button>
+
+    <h2>Kolejność pytań</h2>
+    <div class="seg">
+      <button id="modeRandom" class="on" type="button">Losowa</button>
+      <button id="modeOrder" type="button">Po kolei (1&nbsp;→&nbsp;koniec)</button>
+    </div>
+    <p class="segnote" id="modeNote">Pytania w losowej kolejności.</p>
+
+    <h2>Wybierz test</h2>
+    <div id="list"></div>
+
+    <button id="logout" class="ghost" style="margin-top:14px;">Wyloguj się</button>
   </div>
 
   <!-- QUIZ -->
@@ -102,6 +139,7 @@
       <span id="pos"></span>
       <span class="score">Poprawne: <b id="good">0</b> / <b id="asked">0</b></span>
     </div>
+    <p class="which" id="which"></p>
     <p class="stem" id="stem"></p>
     <div id="opts"></div>
     <p class="verdict hidden" id="verdict"></p>
@@ -114,8 +152,8 @@
   <div id="doneBox" class="hidden">
     <h1>Koniec</h1>
     <p class="sub" id="doneSub"></p>
-    <button id="again">Jeszcze raz</button>
-    <button id="home" class="ghost">Powrót</button>
+    <button id="again">Jeszcze raz (ten sam zestaw)</button>
+    <button id="home" class="ghost">Wybierz inny test</button>
   </div>
 
 </div>
@@ -139,18 +177,18 @@ var db = firebase.firestore();
 var $ = function (id) { return document.getElementById(id); };
 var LETTERS = ["A", "B", "C", "D"];
 
-var all = [];       // every question from Firestore
-var deck = [];      // shuffled queue for this run
-var i = 0;          // index into deck
-var good = 0;       // correct so far
-var asked = 0;      // answered so far
-var locked = false; // true once an answer is picked
+var exams = [];          // summary docs, one per uploaded test
+var mode = "random";     // "random" | "order"
+var deck = [];           // questions for this run, already ordered
+var lastPick = null;     // {examId, label} so "jeszcze raz" can repeat it
+var i = 0, good = 0, asked = 0, locked = false;
 
 function show(which) {
-  ["loginBox", "startBox", "quizBox", "doneBox"].forEach(function (id) {
+  ["loginBox", "pickBox", "quizBox", "doneBox"].forEach(function (id) {
     $(id).classList.toggle("hidden", id !== which);
   });
 }
+function showErr(t) { $("err").textContent = t; $("err").classList.remove("hidden"); }
 
 // ---- auth -----------------------------------------------------------------
 $("loginForm").onsubmit = function (e) {
@@ -166,35 +204,127 @@ $("logout").onclick = function () { auth.signOut(); };
 
 auth.onAuthStateChanged(function (user) {
   if (!user) { show("loginBox"); return; }
-  show("startBox");
-  load();
+  show("pickBox");
+  loadExams();
 });
 
-// ---- load questions -------------------------------------------------------
-function load() {
-  $("start").disabled = true;
-  $("startSub").textContent = "Ładowanie pytań...";
-  db.collection("questions").get()
+// ---- mode switch ----------------------------------------------------------
+function setMode(m) {
+  mode = m;
+  $("modeRandom").classList.toggle("on", m === "random");
+  $("modeOrder").classList.toggle("on", m === "order");
+  $("modeNote").textContent = m === "random"
+    ? "Pytania w losowej kolejności."
+    : "Pytania po kolei, od 1 do końca, tak jak w arkuszu.";
+}
+$("modeRandom").onclick = function () { setMode("random"); };
+$("modeOrder").onclick = function () { setMode("order"); };
+
+// ---- list the tests -------------------------------------------------------
+// Only the exam summary docs are read here (one per test), not the questions
+// themselves - the questions are fetched once you pick a test.
+function loadExams() {
+  $("pickSub").textContent = "Ładowanie listy testów...";
+  $("err").classList.add("hidden");
+  db.collection("exams").get()
     .then(function (snap) {
-      all = snap.docs.map(function (d) { return d.data(); });
-      if (!all.length) {
-        $("startSub").textContent = "Brak pytań w bazie.";
-        $("err").textContent = "Najpierw wgraj pytania na stronie index.html.";
-        $("err").classList.remove("hidden");
-        return;
-      }
-      $("startSub").textContent = all.length + " pytań w bazie. Kolejność losowa.";
-      $("start").disabled = false;
+      exams = snap.docs.map(function (d) { return d.data(); })
+        .sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+      renderList();
     })
     .catch(function (err) {
-      $("startSub").textContent = "Błąd wczytywania.";
-      $("err").textContent = "Błąd: " + (err.code || err.message);
-      $("err").classList.remove("hidden");
+      $("pickSub").textContent = "Błąd wczytywania.";
+      showErr("Błąd: " + (err.code || err.message));
       console.error(err);
     });
 }
 
-// ---- quiz flow ------------------------------------------------------------
+function renderList() {
+  var box = $("list");
+  box.textContent = "";
+
+  if (!exams.length) {
+    $("pickSub").textContent = "Brak testów w bazie.";
+    showErr("Najpierw wgraj testy w panelu (index.html).");
+    return;
+  }
+
+  var total = exams.reduce(function (n, e) { return n + (e.count || 0); }, 0);
+  $("pickSub").textContent = exams.length + " testów, " + total + " pytań w bazie.";
+
+  exams.forEach(function (e) {
+    box.appendChild(itemButton(
+      e.date || e.examId,
+      (e.count || 0) + " pytań",
+      false,
+      function () { startExam(e.examId, e.date || e.examId); }
+    ));
+  });
+
+  box.appendChild(itemButton(
+    "Wszystkie pytania",
+    total + " pytań ze wszystkich testów",
+    true,
+    function () { startExam(null, "Wszystkie testy"); }
+  ));
+}
+
+function itemButton(title, sub, isAll, onClick) {
+  var b = document.createElement("button");
+  b.className = "item" + (isAll ? " all" : "");
+  b.type = "button";
+  var g = document.createElement("span");
+  g.className = "grow";
+  g.textContent = title;
+  var c = document.createElement("span");
+  c.className = "count";
+  c.textContent = sub;
+  b.appendChild(g);
+  b.appendChild(c);
+  b.onclick = onClick;
+  return b;
+}
+
+// ---- start a run ----------------------------------------------------------
+// examId === null means "every test".
+function startExam(examId, label) {
+  lastPick = { examId: examId, label: label };
+  setListBusy(true);
+  $("err").classList.add("hidden");
+  $("pickSub").textContent = "Wczytywanie pytań...";
+
+  var q = examId
+    ? db.collection("questions").where("examId", "==", examId)
+    : db.collection("questions");
+
+  q.get()
+    .then(function (snap) {
+      var qs = snap.docs.map(function (d) { return d.data(); });
+      if (!qs.length) {
+        showErr("Ten test nie ma pytań w bazie.");
+        return;
+      }
+      begin(qs, label);
+    })
+    .catch(function (err) {
+      // "jeszcze raz" can start a run from the results screen, so make sure
+      // the error is on a screen that is actually visible
+      show("pickBox");
+      showErr("Błąd: " + (err.code || err.message));
+      console.error(err);
+    })
+    .then(function () {
+      setListBusy(false);
+      renderList();
+    });
+}
+
+function setListBusy(b) {
+  Array.prototype.forEach.call($("list").querySelectorAll("button"), function (x) {
+    x.disabled = b;
+  });
+}
+
 function shuffle(a) {                       // Fisher-Yates
   a = a.slice();
   for (var j = a.length - 1; j > 0; j--) {
@@ -204,19 +334,28 @@ function shuffle(a) {                       // Fisher-Yates
   return a;
 }
 
-function begin() {
-  deck = shuffle(all);
+// Firestore returns documents in no useful order, so "po kolei" has to sort
+// explicitly: by exam date first (only matters when mixing every test), then
+// by the question number printed in the paper.
+function inPaperOrder(a) {
+  return a.slice().sort(function (x, y) {
+    var d = String(x.examDate || "").localeCompare(String(y.examDate || ""));
+    return d !== 0 ? d : (x.number || 0) - (y.number || 0);
+  });
+}
+
+function begin(qs, label) {
+  deck = mode === "random" ? shuffle(qs) : inPaperOrder(qs);
   i = 0; good = 0; asked = 0;
   $("good").textContent = "0";
   $("asked").textContent = "0";
+  $("which").textContent = label + "  -  " + deck.length + " pytań  -  " +
+    (mode === "random" ? "losowo" : "po kolei");
   show("quizBox");
   render();
 }
-$("start").onclick = begin;
-$("again").onclick = begin;
-$("home").onclick = function () { show("startBox"); };
-$("quit").onclick = finish;
 
+// ---- one question ---------------------------------------------------------
 function render() {
   locked = false;
   var q = deck[i];
@@ -230,7 +369,7 @@ function render() {
   LETTERS.forEach(function (L) {
     var b = document.createElement("button");
     b.className = "opt";
-    b.innerHTML = "";
+    b.type = "button";
     var s = document.createElement("span");
     s.className = "letter";
     s.textContent = L + ".";
@@ -238,8 +377,8 @@ function render() {
     t.textContent = q.options[L];
     b.appendChild(s);
     b.appendChild(t);
-    b.onclick = function () { answer(L); };
     b.dataset.letter = L;
+    b.onclick = function () { answer(L); };
     box.appendChild(b);
   });
 }
@@ -255,17 +394,14 @@ function answer(picked) {
   $("good").textContent = good;
   $("asked").textContent = asked;
 
-  var buttons = $("opts").querySelectorAll("button");
-  Array.prototype.forEach.call(buttons, function (b) {
+  Array.prototype.forEach.call($("opts").querySelectorAll("button"), function (b) {
     b.disabled = true;
     if (b.dataset.letter === q.answer) b.classList.add("correct");
     else if (b.dataset.letter === picked) b.classList.add("wrong");
   });
 
   var v = $("verdict");
-  v.textContent = right
-    ? "Dobrze!"
-    : "Źle. Poprawna odpowiedź to " + q.answer + ".";
+  v.textContent = right ? "Dobrze!" : "Źle. Poprawna odpowiedź to " + q.answer + ".";
   v.className = "verdict " + (right ? "good" : "bad");
   v.classList.remove("hidden");
 
@@ -277,13 +413,23 @@ $("next").onclick = function () {
   if (i + 1 < deck.length) { i++; render(); }
   else finish();
 };
+$("quit").onclick = finish;
 
 function finish() {
   var pct = asked ? Math.round((good / asked) * 100) : 0;
-  $("doneSub").textContent =
-    "Poprawne odpowiedzi: " + good + " z " + asked + " (" + pct + "%).";
+  $("doneSub").textContent = (lastPick ? lastPick.label + ": " : "") +
+    "poprawne odpowiedzi " + good + " z " + asked + " (" + pct + "%).";
   show("doneBox");
 }
+
+$("again").onclick = function () {
+  if (lastPick) startExam(lastPick.examId, lastPick.label);
+};
+$("home").onclick = function () {
+  show("pickBox");
+  $("pickSub").textContent = exams.length + " testów w bazie.";
+  renderList();
+};
 
 // ---- keyboard shortcuts ---------------------------------------------------
 document.addEventListener("keydown", function (e) {
