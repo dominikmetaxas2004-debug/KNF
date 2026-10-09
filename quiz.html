@@ -77,7 +77,15 @@
   .verdict { font-weight: 600; margin: 16px 0 12px; }
   .verdict.good { color: #1a6b34; }
   .verdict.bad { color: #a01b1b; }
-  .score { font-variant-numeric: tabular-nums; }
+  .verdict.skip { color: #6b7280; }
+  .score { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tally { font-size: 12px; color: #9aa2ad; margin: -8px 0 14px;
+           font-variant-numeric: tabular-nums; }
+  .opt.missed { background: #f5f6f8; border-color: #c3c8d0; color: #4b5563; }
+  .result { font-size: 15px; margin: 0 0 6px; }
+  .result b { font-variant-numeric: tabular-nums; }
+  .breakdown { font-size: 14px; color: #6b7280; margin: 0 0 20px;
+               font-variant-numeric: tabular-nums; }
   .hint { font-size: 12px; color: #9aa2ad; margin-top: 14px; }
 
   /* phone: edge-to-edge card, bigger tap targets, no keyboard hint */
@@ -130,28 +138,32 @@
     <h2>Wybierz test</h2>
     <div id="list"></div>
 
-    <button id="logout" class="ghost" style="margin-top:14px;">Wyloguj się</button>
+    <button id="goPanel" class="ghost" style="margin-top:14px;">Panel (wgrywanie testów)</button>
+    <button id="logout" class="ghost">Wyloguj się</button>
   </div>
 
   <!-- QUIZ -->
   <div id="quizBox" class="hidden">
     <div class="bar-top">
       <span id="pos"></span>
-      <span class="score">Poprawne: <b id="good">0</b> / <b id="asked">0</b></span>
+      <span class="score">Punkty: <b id="pts">0</b> / <b id="ptsMax">0</b></span>
     </div>
     <p class="which" id="which"></p>
+    <p class="tally" id="tally"></p>
     <p class="stem" id="stem"></p>
     <div id="opts"></div>
     <p class="verdict hidden" id="verdict"></p>
     <button id="next" class="hidden">Następne pytanie</button>
+    <button id="skip" class="ghost">Pomiń pytanie (0 pkt)</button>
     <button id="quit" class="ghost">Zakończ</button>
-    <p class="hint">Skrót: A/B/C/D lub 1-4 aby odpowiedzieć, Enter aby przejść dalej.</p>
+    <p class="hint">Skrót: A/B/C/D lub 1-4 aby odpowiedzieć, S aby pominąć, Enter aby przejść dalej.</p>
   </div>
 
   <!-- DONE -->
   <div id="doneBox" class="hidden">
     <h1>Koniec</h1>
-    <p class="sub" id="doneSub"></p>
+    <p class="result" id="doneSub"></p>
+    <p class="breakdown" id="doneBreak"></p>
     <button id="again">Jeszcze raz (ten sam zestaw)</button>
     <button id="home" class="ghost">Wybierz inny test</button>
   </div>
@@ -181,7 +193,12 @@ var exams = [];          // summary docs, one per uploaded test
 var mode = "random";     // "random" | "order"
 var deck = [];           // questions for this run, already ordered
 var lastPick = null;     // {examId, label} so "jeszcze raz" can repeat it
-var i = 0, good = 0, asked = 0, locked = false;
+var i = 0, locked = false;
+
+// Official KNF scoring: +2 for a correct answer, -1 for a wrong one,
+// 0 for a question left blank. A wrong guess is worse than a skip.
+var PTS_OK = 2, PTS_BAD = -1, PTS_SKIP = 0;
+var good = 0, bad = 0, skipped = 0, points = 0;
 
 function show(which) {
   ["loginBox", "pickBox", "quizBox", "doneBox"].forEach(function (id) {
@@ -201,6 +218,7 @@ $("loginForm").onsubmit = function (e) {
     });
 };
 $("logout").onclick = function () { auth.signOut(); };
+$("goPanel").onclick = function () { location.href = "index.html"; };
 
 auth.onAuthStateChanged(function (user) {
   if (!user) { show("loginBox"); return; }
@@ -346,9 +364,9 @@ function inPaperOrder(a) {
 
 function begin(qs, label) {
   deck = mode === "random" ? shuffle(qs) : inPaperOrder(qs);
-  i = 0; good = 0; asked = 0;
-  $("good").textContent = "0";
-  $("asked").textContent = "0";
+  i = 0; good = 0; bad = 0; skipped = 0; points = 0;
+  $("ptsMax").textContent = PTS_OK * deck.length;
+  updateScore();
   $("which").textContent = label + "  -  " + deck.length + " pytań  -  " +
     (mode === "random" ? "losowo" : "po kolei");
   show("quizBox");
@@ -363,6 +381,7 @@ function render() {
   $("stem").textContent = q.number + ". " + q.question;
   $("verdict").classList.add("hidden");
   $("next").classList.add("hidden");
+  $("skip").classList.remove("hidden");
 
   var box = $("opts");
   box.textContent = "";
@@ -383,31 +402,66 @@ function render() {
   });
 }
 
-function answer(picked) {
-  if (locked) return;
+function updateScore() {
+  $("pts").textContent = points;
+  $("tally").textContent =
+    "Dobrze " + good + " (+" + (good * PTS_OK) + ")" +
+    "  ·  Źle " + bad + " (" + (bad * PTS_BAD) + ")" +
+    "  ·  Pominięte " + skipped + " (0)";
+}
+
+// Lock the question, reveal the key, and move the buttons to the "answered"
+// state. `picked` is null when the question was skipped.
+function reveal(q, picked) {
   locked = true;
-  var q = deck[i];
-  var right = picked === q.answer;
-
-  asked++;
-  if (right) good++;
-  $("good").textContent = good;
-  $("asked").textContent = asked;
-
   Array.prototype.forEach.call($("opts").querySelectorAll("button"), function (b) {
     b.disabled = true;
-    if (b.dataset.letter === q.answer) b.classList.add("correct");
-    else if (b.dataset.letter === picked) b.classList.add("wrong");
+    if (b.dataset.letter === q.answer) {
+      b.classList.add(picked === null ? "missed" : "correct");
+    } else if (picked !== null && b.dataset.letter === picked) {
+      b.classList.add("wrong");
+    }
   });
-
-  var v = $("verdict");
-  v.textContent = right ? "Dobrze!" : "Źle. Poprawna odpowiedź to " + q.answer + ".";
-  v.className = "verdict " + (right ? "good" : "bad");
-  v.classList.remove("hidden");
-
+  $("skip").classList.add("hidden");
   $("next").textContent = (i + 1 < deck.length) ? "Następne pytanie" : "Zobacz wynik";
   $("next").classList.remove("hidden");
 }
+
+function answer(picked) {
+  if (locked) return;
+  var q = deck[i];
+  var right = picked === q.answer;
+
+  if (right) { good++; points += PTS_OK; }
+  else { bad++; points += PTS_BAD; }
+  updateScore();
+
+  reveal(q, picked);
+
+  var v = $("verdict");
+  v.textContent = right
+    ? "Dobrze! +" + PTS_OK + " pkt"
+    : "Źle (" + PTS_BAD + " pkt). Poprawna odpowiedź to " + q.answer + ".";
+  v.className = "verdict " + (right ? "good" : "bad");
+  v.classList.remove("hidden");
+}
+
+function skipQuestion() {
+  if (locked) return;
+  var q = deck[i];
+  skipped++;
+  points += PTS_SKIP;
+  updateScore();
+
+  reveal(q, null);
+
+  var v = $("verdict");
+  v.textContent = "Pominięte (0 pkt). Poprawna odpowiedź to " + q.answer + ".";
+  v.className = "verdict skip";
+  v.classList.remove("hidden");
+}
+
+$("skip").onclick = skipQuestion;
 
 $("next").onclick = function () {
   if (i + 1 < deck.length) { i++; render(); }
@@ -416,9 +470,22 @@ $("next").onclick = function () {
 $("quit").onclick = finish;
 
 function finish() {
-  var pct = asked ? Math.round((good / asked) * 100) : 0;
+  var seen = good + bad + skipped;
+  var maxAll = PTS_OK * deck.length;
+  var pct = maxAll ? Math.round((points / maxAll) * 100) : 0;
+
   $("doneSub").textContent = (lastPick ? lastPick.label + ": " : "") +
-    "poprawne odpowiedzi " + good + " z " + asked + " (" + pct + "%).";
+    "wynik " + points + " / " + maxAll + " pkt (" + pct + "%).";
+
+  var parts = [
+    "Dobrze " + good + " × +" + PTS_OK + " = " + (good * PTS_OK),
+    "Źle " + bad + " × " + PTS_BAD + " = " + (bad * PTS_BAD),
+    "Pominięte " + skipped + " = 0",
+  ];
+  if (seen < deck.length) {
+    parts.push("rozwiązano " + seen + " z " + deck.length + " pytań");
+  }
+  $("doneBreak").textContent = parts.join("  ·  ");
   show("doneBox");
 }
 
@@ -435,6 +502,7 @@ $("home").onclick = function () {
 document.addEventListener("keydown", function (e) {
   if ($("quizBox").classList.contains("hidden")) return;
   var k = e.key.toUpperCase();
+  if (!locked && k === "S") { e.preventDefault(); skipQuestion(); return; }
   if (!locked && LETTERS.indexOf(k) >= 0) { answer(k); return; }
   if (!locked && k >= "1" && k <= "4") { answer(LETTERS[+k - 1]); return; }
   if (locked && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); $("next").click(); }
