@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f7">
+<link rel="icon" href="data:,">
+<title>KNF - Dane</title>
+<style>
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: start center; padding: 24px;
+    background: #f4f5f7; color: #16181d;
+    font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  .card {
+    width: 100%; max-width: 760px; background: #fff; border: 1px solid #d8dbe0;
+    border-radius: 12px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,.07);
+  }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
+       color: #6b7280; margin: 24px 0 10px; }
+  .sub { margin: 0 0 20px; color: #6b7280; font-size: 13px; }
+  label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 500; }
+  input[type=email], input[type=password] {
+    width: 100%; padding: 10px 12px; margin-bottom: 14px; font-size: 16px;
+    border: 1px solid #d8dbe0; border-radius: 8px; box-sizing: border-box;
+  }
+  button, .btn {
+    display: block; width: 100%; padding: 11px; font-size: 15px; font-weight: 600;
+    cursor: pointer; text-align: center; text-decoration: none;
+    color: #fff; background: #2563eb; border: 0; border-radius: 8px; margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  button.ghost, .btn.ghost { background: #fff; color: #2563eb; border: 1px solid #d8dbe0; }
+  .msg { padding: 10px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 16px;
+         background: #fdecec; color: #a01b1b; border: 1px solid #f2c2c2; }
+
+  /* tabs */
+  .tabs { display: flex; gap: 0; margin-bottom: 22px; }
+  .tabs a {
+    flex: 1; padding: 9px 6px; text-align: center; text-decoration: none;
+    font-size: 14px; font-weight: 500; color: #16181d;
+    background: #fff; border: 1px solid #d8dbe0;
+  }
+  .tabs a:first-child { border-radius: 8px 0 0 8px; }
+  .tabs a:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+  .tabs a.on { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 600; }
+
+  /* dataset */
+  .ds { border: 1px solid #d8dbe0; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+  .ds h3 { margin: 0 0 2px; font-size: 16px; }
+  .ds .meta { font-size: 13px; color: #6b7280; margin: 0 0 14px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+           gap: 10px; margin-bottom: 16px; }
+  .fact { background: #f7f8fa; border-radius: 8px; padding: 9px 11px; }
+  .fact span { display: block; font-size: 11px; text-transform: uppercase;
+               letter-spacing: .04em; color: #9aa2ad; }
+  .fact b { font-size: 14px; font-variant-numeric: tabular-nums; }
+  details { margin-top: 12px; }
+  summary { cursor: pointer; font-size: 13px; color: #6b7280; margin-bottom: 10px; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; font-size: 12px; width: 100%;
+          font-family: ui-monospace, Consolas, monospace; }
+  th, td { padding: 5px 9px; border-bottom: 1px solid #eee; text-align: right; white-space: nowrap; }
+  th { color: #6b7280; font-weight: 600; text-align: right; border-bottom: 1px solid #d8dbe0; }
+  th:first-child, td:first-child { text-align: left; }
+  .cols { font-size: 12px; color: #6b7280; font-family: ui-monospace, Consolas, monospace;
+          word-break: break-word; }
+  .hidden { display: none; }
+  .note { font-size: 12px; color: #9aa2ad; }
+
+  @media (max-width: 640px) {
+    body { padding: 0; }
+    .card {
+      max-width: none; min-height: 100vh; border: 0; border-radius: 0;
+      box-shadow: none; padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+    }
+    .ds { padding: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- LOGIN -->
+  <div id="loginBox" class="hidden">
+    <h1>Logowanie</h1>
+    <p class="sub">Zaloguj się, aby zobaczyć dane</p>
+    <div id="loginErr" class="msg hidden"></div>
+    <form id="loginForm">
+      <label>E-mail</label>
+      <input type="email" id="email" required>
+      <label>Hasło</label>
+      <input type="password" id="password" required>
+      <button type="submit">Zaloguj się</button>
+    </form>
+  </div>
+
+  <!-- DATA -->
+  <div id="dataBox" class="hidden">
+    <div class="tabs">
+      <a href="index.html">Panel</a>
+      <a href="quiz.html">Pytania</a>
+      <a href="data.html" class="on">Dane</a>
+    </div>
+
+    <h1>Dane rynkowe</h1>
+    <p class="sub" id="sub">Notowania do pobrania w formacie CSV.</p>
+
+    <div id="list"></div>
+
+    <h2>Konto</h2>
+    <button id="logout" class="ghost">Wyloguj się</button>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="datasets.js"></script>
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBjg6qDO4AG6LvRomoGe8Al8Gjk_N2rPlw",
+  authDomain: "knfquestions.firebaseapp.com",
+  projectId: "knfquestions",
+  storageBucket: "knfquestions.firebasestorage.app",
+  messagingSenderId: "820771001390",
+  appId: "1:820771001390:web:f62c15dbc743a8b6f5fbbf",
+});
+
+var auth = firebase.auth();
+var $ = function (id) { return document.getElementById(id); };
+
+$("loginForm").onsubmit = function (e) {
+  e.preventDefault();
+  $("loginErr").classList.add("hidden");
+  auth.signInWithEmailAndPassword($("email").value.trim(), $("password").value)
+    .catch(function (err) {
+      $("loginErr").textContent = "Nie udało się zalogować: " + err.code;
+      $("loginErr").classList.remove("hidden");
+    });
+};
+$("logout").onclick = function () { auth.signOut(); };
+
+auth.onAuthStateChanged(function (user) {
+  $("loginBox").classList.toggle("hidden", !!user);
+  $("dataBox").classList.toggle("hidden", !user);
+  if (user) render();
+});
+
+// Everything shown here comes from datasets.js, which make_datasets.py
+// generates. The CSV itself is only fetched when the download is clicked.
+function render() {
+  var box = $("list");
+  box.textContent = "";
+
+  if (typeof DATASETS === "undefined" || !DATASETS.length) {
+    box.innerHTML = '<p class="note">Brak zbiorów danych.</p>';
+    return;
+  }
+
+  var total = DATASETS.reduce(function (n, d) { return n + d.bytes; }, 0);
+  $("sub").textContent = DATASETS.length + " zbiór(ów) do pobrania, "
+    + (total / 1048576).toFixed(1) + " MB łącznie.";
+
+  DATASETS.forEach(function (d) {
+    var card = document.createElement("div");
+    card.className = "ds";
+
+    var h = document.createElement("h3");
+    h.textContent = d.symbol + (d.timeframe ? "  ·  " + d.timeframe : "");
+    card.appendChild(h);
+
+    var meta = document.createElement("p");
+    meta.className = "meta";
+    meta.textContent = d.file;
+    card.appendChild(meta);
+
+    var facts = document.createElement("div");
+    facts.className = "facts";
+    [["Wierszy", fmtInt(d.rows)],
+     ["Rozmiar", d.size],
+     ["Od", shortTime(d.firstTime)],
+     ["Do", shortTime(d.lastTime)]].forEach(function (pair) {
+      var f = document.createElement("div");
+      f.className = "fact";
+      var s = document.createElement("span");
+      s.textContent = pair[0];
+      var b = document.createElement("b");
+      b.textContent = pair[1];
+      f.appendChild(s); f.appendChild(b);
+      facts.appendChild(f);
+    });
+    card.appendChild(facts);
+
+    var a = document.createElement("a");
+    a.className = "btn";
+    a.href = d.path;
+    a.setAttribute("download", d.file);
+    a.textContent = "Pobierz CSV (" + d.size + ")";
+    card.appendChild(a);
+
+    card.appendChild(previewBlock(d));
+    box.appendChild(card);
+  });
+}
+
+function previewBlock(d) {
+  var det = document.createElement("details");
+  var sum = document.createElement("summary");
+  sum.textContent = "Podgląd i kolumny";
+  det.appendChild(sum);
+
+  var cols = document.createElement("p");
+  cols.className = "cols";
+  cols.textContent = d.columns.join(", ");
+  det.appendChild(cols);
+
+  var wrap = document.createElement("div");
+  wrap.className = "scroll";
+  var tbl = document.createElement("table");
+
+  var tr = document.createElement("tr");
+  d.columns.forEach(function (c) {
+    var th = document.createElement("th");
+    th.textContent = c;
+    tr.appendChild(th);
+  });
+  tbl.appendChild(tr);
+
+  d.preview.forEach(function (row) {
+    var r = document.createElement("tr");
+    row.forEach(function (cell) {
+      var td = document.createElement("td");
+      td.textContent = cell;
+      r.appendChild(td);
+    });
+    tbl.appendChild(r);
+  });
+
+  wrap.appendChild(tbl);
+  det.appendChild(wrap);
+  return det;
+}
+
+function fmtInt(n) {
+  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+function shortTime(t) {
+  return String(t).replace("T", " ").replace(/\+.*$/, "").slice(0, 16);
+}
+</script>
+</body>
+</html>

@@ -65,6 +65,15 @@
     input[type=email], input[type=password], select { font-size: 16px; }
     button { padding: 13px; }
   }
+  .tabs { display: flex; gap: 0; margin-bottom: 22px; }
+  .tabs a {
+    flex: 1; padding: 9px 6px; text-align: center; text-decoration: none;
+    font-size: 14px; font-weight: 500; color: #16181d;
+    background: #fff; border: 1px solid #d8dbe0;
+  }
+  .tabs a:first-child { border-radius: 8px 0 0 8px; }
+  .tabs a:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+  .tabs a.on { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -87,6 +96,11 @@
 
   <!-- PANEL -->
   <div id="panel" class="hidden">
+    <div class="tabs">
+      <a href="index.html" class="on">Panel</a>
+      <a href="quiz.html">Pytania</a>
+      <a href="data.html">Dane</a>
+    </div>
     <h1>Panel</h1>
     <p class="sub">Zalogowano jako <b id="who"></b></p>
 

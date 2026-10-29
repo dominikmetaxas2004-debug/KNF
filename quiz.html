@@ -102,6 +102,15 @@
     .seg button { padding: 11px; }
     .hint { display: none; }
   }
+  .tabs { display: flex; gap: 0; margin-bottom: 22px; }
+  .tabs a {
+    flex: 1; padding: 9px 6px; text-align: center; text-decoration: none;
+    font-size: 14px; font-weight: 500; color: #16181d;
+    background: #fff; border: 1px solid #d8dbe0;
+  }
+  .tabs a:first-child { border-radius: 8px 0 0 8px; }
+  .tabs a:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+  .tabs a.on { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -124,6 +133,11 @@
 
   <!-- PICK A TEST -->
   <div id="pickBox" class="hidden">
+    <div class="tabs">
+      <a href="index.html">Panel</a>
+      <a href="quiz.html" class="on">Pytania</a>
+      <a href="data.html">Dane</a>
+    </div>
     <h1>Pytania egzaminacyjne</h1>
     <p class="sub" id="pickSub">Ładowanie...</p>
     <div id="err" class="msg hidden"></div>
@@ -138,7 +152,6 @@
     <h2>Wybierz test</h2>
     <div id="list"></div>
 
-    <button id="goPanel" class="ghost" style="margin-top:14px;">Panel (wgrywanie testów)</button>
     <button id="logout" class="ghost">Wyloguj się</button>
   </div>
 
@@ -218,7 +231,6 @@ $("loginForm").onsubmit = function (e) {
     });
 };
 $("logout").onclick = function () { auth.signOut(); };
-$("goPanel").onclick = function () { location.href = "index.html"; };
 
 auth.onAuthStateChanged(function (user) {
   if (!user) { show("loginBox"); return; }
